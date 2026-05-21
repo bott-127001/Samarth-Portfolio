@@ -420,7 +420,7 @@ const Footer = () => (
         <a href="tel:+919579158374" className="w-10 h-10 rounded-full bg-white border border-slate-200 flex items-center justify-center hover:bg-slate-900 hover:text-white transition-colors" title="Phone">
           <Phone size={18} />
         </a>
-        <a href="https://linkedin.com/in/prajwalnangare" target="_blank" rel="noreferrer" className="w-10 h-10 rounded-full bg-white border border-slate-200 flex items-center justify-center hover:bg-slate-900 hover:text-white transition-colors" title="LinkedIn">
+        <a href="https://www.linkedin.com/in/prajwal-nangare-5988042b2/" target="_blank" rel="noreferrer" className="w-10 h-10 rounded-full bg-white border border-slate-200 flex items-center justify-center hover:bg-slate-900 hover:text-white transition-colors" title="LinkedIn">
           <LinkedinIcon size={18} />
         </a>
         <a href="https://github.com/prajwalnangare01" target="_blank" rel="noreferrer" className="w-10 h-10 rounded-full bg-white border border-slate-200 flex items-center justify-center hover:bg-slate-900 hover:text-white transition-colors" title="GitHub">
