@@ -99,7 +99,7 @@ const NavBar = () => {
 };
 
 const TypewriterHeading = () => {
-  const phrases = ["Full Stack Developer", "AI Engineer", "GenAI Engineer"];
+  const phrases = ["Full Stack Developer", "AI Engineer", "GenAI Engineer", "Codiva Founder"];
   const [currentPhraseIndex, setCurrentPhraseIndex] = useState(0);
   const [currentText, setCurrentText] = useState("");
   const [isDeleting, setIsDeleting] = useState(false);
@@ -160,6 +160,7 @@ const Hero = () => (
         <motion.p variants={fadeIn} className="text-lg text-slate-600 leading-relaxed max-w-2xl mb-10">
           A Computer Science student and Full Stack Developer based in Pune, India. 
           I specialize in building robust web applications using the MERN stack and have a strong focus on clean architecture and scalable solutions. Currently exploring Machine Learning and Generative AI.
+          Crafting pixel-perfect, high-performance web experiences as Founder & Frontend Lead at Codiva.
         </motion.p>
         
         <motion.div variants={fadeIn} className="flex flex-wrap gap-4 text-sm font-medium">
@@ -177,6 +178,37 @@ const Hero = () => (
     </div>
   </section>
 );
+
+const CodivaSection = () => {
+  return (
+    <section id="codiva" className="py-24 bg-slate-900 text-white border-t border-slate-800">
+      <div className="max-w-4xl mx-auto px-6">
+        <h2 className="text-xl font-bold mb-10 tracking-tight uppercase text-sm tracking-widest text-slate-400">My Agency</h2>
+        <motion.div 
+          initial={{ opacity: 0, y: 10 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="bg-slate-800/50 rounded-2xl p-8 md:p-12 border border-slate-700/50 hover:border-slate-600 transition-colors shadow-2xl"
+        >
+          <div className="flex flex-col md:flex-row gap-8 items-start">
+            <div className="w-full md:w-1/3 shrink-0">
+              <h3 className="text-3xl font-extrabold text-white mb-2">Codiva.</h3>
+              <p className="text-slate-400 font-medium mb-6">Code Driven by Vision</p>
+              <a href="https://codivalabs.com/" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 px-5 py-2.5 bg-white text-slate-900 rounded-md text-sm font-semibold hover:bg-slate-100 transition-colors">
+                <ExternalLink size={16} /> Visit Website
+              </a>
+            </div>
+            <div className="w-full md:w-2/3">
+              <p className="text-slate-300 leading-relaxed text-lg">
+                We craft premium, scalable web solutions designed to drive business growth and elevate user engagement. As Founder and Frontend Lead, I oversee the end-to-end development of high-performance digital platforms, delivering everything from custom, feature-rich web applications to SEO-optimized, modern digital branding experiences.
+              </p>
+            </div>
+          </div>
+        </motion.div>
+      </div>
+    </section>
+  );
+};
 
 const Skills = () => {
   const categories = [
@@ -438,6 +470,7 @@ function App() {
       <NavBar />
       <main className="relative z-10">
         <Hero />
+        <CodivaSection />
         <Skills />
         <Projects />
         <Experience />
