@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { 
-  Terminal, 
-  Database, 
-  Code2, 
-  Cpu, 
-  Globe, 
+import {
+  Terminal,
+  Database,
+  Code2,
+  Cpu,
+  Globe,
   ExternalLink,
   ChevronRight,
   Mail,
@@ -73,10 +73,10 @@ const NavBar = () => {
           </button>
         </div>
       </div>
-      
+
       {/* Mobile Menu */}
       {isOpen && (
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, y: -10 }}
           animate={{ opacity: 1, y: 0 }}
           className="md:hidden absolute top-16 left-0 w-full bg-white border-b border-slate-200 shadow-lg py-4 px-6 flex flex-col gap-4"
@@ -99,7 +99,7 @@ const NavBar = () => {
 };
 
 const TypewriterHeading = () => {
-  const phrases = ["Full Stack Developer", "AI Engineer", "GenAI Engineer", "Codiva Founder"];
+  const phrases = ["Full Stack Developer", "AI Engineer", "GenAI Engineer", "Data Scientist", "Codiva Founder"];
   const [currentPhraseIndex, setCurrentPhraseIndex] = useState(0);
   const [currentText, setCurrentText] = useState("");
   const [isDeleting, setIsDeleting] = useState(false);
@@ -107,7 +107,7 @@ const TypewriterHeading = () => {
   useEffect(() => {
     let timer;
     const currentFullPhrase = phrases[currentPhraseIndex];
-    
+
     if (isDeleting) {
       timer = setTimeout(() => {
         setCurrentText(currentFullPhrase.substring(0, currentText.length - 1));
@@ -115,19 +115,19 @@ const TypewriterHeading = () => {
           setIsDeleting(false);
           setCurrentPhraseIndex((prev) => (prev + 1) % phrases.length);
         }
-      }, 30);
+      }, 15);
     } else {
       if (currentText === currentFullPhrase) {
         timer = setTimeout(() => {
           setIsDeleting(true);
-        }, 2000);
+        }, 1000);
       } else {
         timer = setTimeout(() => {
           setCurrentText(currentFullPhrase.substring(0, currentText.length + 1));
-        }, 80);
+        }, 40);
       }
     }
-    
+
     return () => clearTimeout(timer);
   }, [currentText, isDeleting, currentPhraseIndex, phrases]);
 
@@ -156,13 +156,13 @@ const Hero = () => (
         className="max-w-3xl"
       >
         <TypewriterHeading />
-        
+
         <motion.p variants={fadeIn} className="text-lg text-slate-600 leading-relaxed max-w-2xl mb-10">
-          A Computer Science student and Full Stack Developer based in Pune, India. 
+          A Computer Science student and Full Stack Developer based in Pune, India.
           I specialize in building robust web applications using the MERN stack and have a strong focus on clean architecture and scalable solutions. Currently exploring Machine Learning and Generative AI.
           Crafting pixel-perfect, high-performance web experiences as Founder & Frontend Lead at Codiva.
         </motion.p>
-        
+
         <motion.div variants={fadeIn} className="flex flex-wrap gap-4 text-sm font-medium">
           <a href="#projects" className="px-6 py-3 rounded-md bg-slate-900 text-white hover:bg-slate-800 transition-colors flex items-center gap-2">
             View My Work <ChevronRight size={16} />
@@ -184,7 +184,7 @@ const CodivaSection = () => {
     <section id="codiva" className="py-24 bg-slate-900 text-white border-t border-slate-800">
       <div className="max-w-4xl mx-auto px-6">
         <h2 className="text-xl font-bold mb-10 tracking-tight uppercase text-sm tracking-widest text-slate-400">My Agency</h2>
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, y: 10 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -224,7 +224,7 @@ const Skills = () => {
         <h2 className="text-xl font-bold text-slate-900 mb-10 tracking-tight uppercase text-sm tracking-widest text-slate-400">Technical Skills</h2>
         <div className="space-y-6">
           {categories.map((cat, idx) => (
-            <motion.div 
+            <motion.div
               key={idx}
               initial={{ opacity: 0, y: 10 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -234,8 +234,8 @@ const Skills = () => {
               <div className="w-full md:w-1/4 font-medium text-slate-900">{cat.title}</div>
               <div className="w-full md:w-3/4 flex flex-wrap gap-2">
                 {cat.skills.map((skill, i) => (
-                  <span 
-                    key={i} 
+                  <span
+                    key={i}
                     className="px-3 py-1.5 bg-white border border-slate-200/60 rounded-md text-xs font-semibold text-slate-600 shadow-sm hover:border-slate-300 hover:text-slate-900 hover:-translate-y-0.5 transition-all cursor-default"
                   >
                     {skill}
@@ -283,7 +283,7 @@ const Projects = () => {
     <section id="projects" className="py-24 bg-slate-50">
       <div className="max-w-4xl mx-auto px-6">
         <h2 className="text-xl font-bold text-slate-900 mb-10 tracking-tight uppercase text-sm tracking-widest text-slate-400">Selected Projects</h2>
-        
+
         <div className="flex flex-col">
           {projects.map((proj, idx) => (
             <motion.div
@@ -302,7 +302,7 @@ const Projects = () => {
                   </span>
                 )}
               </div>
-              
+
               <div className="w-full md:w-2/3">
                 <p className="text-slate-600 leading-relaxed mb-6">
                   {proj.description}
@@ -337,10 +337,10 @@ const Projects = () => {
           viewport={{ once: true }}
           className="mt-12 flex justify-start"
         >
-          <a 
-            href="https://github.com/prajwalnangare01" 
-            target="_blank" 
-            rel="noreferrer" 
+          <a
+            href="https://github.com/prajwalnangare01"
+            target="_blank"
+            rel="noreferrer"
             className="inline-flex items-center gap-2 px-6 py-3 bg-white border border-slate-200 text-slate-700 text-sm font-medium rounded-md hover:bg-slate-50 hover:text-slate-900 transition-colors shadow-sm"
           >
             <GithubIcon size={16} /> View more on GitHub
@@ -377,7 +377,7 @@ const Experience = () => {
     <section id="experience" className="py-24 bg-white border-t border-slate-200">
       <div className="max-w-4xl mx-auto px-6">
         <h2 className="text-xl font-bold text-slate-900 mb-10 tracking-tight uppercase text-sm tracking-widest text-slate-400">Experience & Education</h2>
-        
+
         {/* Experience List */}
         <div className="mb-16">
           <h3 className="text-lg font-bold text-slate-900 mb-8 border-b border-slate-100 pb-2">Professional Experience</h3>
@@ -432,7 +432,7 @@ const Experience = () => {
             </div>
           </div>
         </div>
-        
+
       </div>
     </section>
   );
@@ -444,7 +444,7 @@ const Footer = () => (
       <div className="text-slate-500 text-sm font-medium order-2 md:order-1 mt-4 md:mt-0">
         © {new Date().getFullYear()} Prajwal Nangare. All rights reserved.
       </div>
-      
+
       <div className="flex items-center gap-6 text-slate-600 order-1 md:order-2">
         <a href="mailto:prajwalnangare41@gmail.com" className="w-10 h-10 rounded-full bg-white border border-slate-200 flex items-center justify-center hover:bg-slate-900 hover:text-white transition-colors" title="Email">
           <Mail size={18} />
