@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
+import { motion, useScroll, useSpring } from 'framer-motion';
 import {
   Terminal,
   Database,
@@ -16,7 +16,8 @@ import {
   FileText,
   Menu,
   X,
-  Send
+  Send,
+  ArrowUp
 } from 'lucide-react';
 
 const fadeIn = {
@@ -43,6 +44,14 @@ const LinkedinIcon = ({ size = 24, className = "" }) => (
     <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
     <rect x="2" y="9" width="4" height="12"></rect>
     <circle cx="4" cy="4" r="2"></circle>
+  </svg>
+);
+
+const InstagramIcon = ({ size = 24, className = "" }) => (
+  <svg xmlns="http://www.w3.org/2000/svg" width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}>
+    <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+    <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
   </svg>
 );
 
@@ -143,7 +152,7 @@ const TypewriterHeading = () => {
 };
 
 const Hero = () => (
-  <section className="relative min-h-screen flex items-center pt-20 bg-slate-50 overflow-hidden">
+  <section id="about" className="relative min-h-screen flex items-center pt-20 bg-slate-50 overflow-hidden">
     {/* Aesthetic Ambient Orbs */}
     <div className="absolute top-[-10%] left-[-5%] w-[40vw] h-[40vw] rounded-full bg-blue-400/5 blur-[100px] animate-[spin_20s_linear_infinite]" />
     <div className="absolute bottom-[-10%] right-[-5%] w-[35vw] h-[35vw] rounded-full bg-purple-400/5 blur-[100px] animate-[spin_25s_linear_infinite_reverse]" />
@@ -183,7 +192,15 @@ const CodivaSection = () => {
   return (
     <section id="codiva" className="py-24 bg-slate-900 text-white border-t border-slate-800">
       <div className="max-w-4xl mx-auto px-6">
-        <h2 className="text-xl font-bold mb-10 tracking-tight uppercase text-sm tracking-widest text-slate-400">My Agency</h2>
+        <motion.h2 
+          initial={{ opacity: 0, x: -20 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5 }}
+          className="text-xl font-bold mb-10 tracking-tight uppercase text-sm tracking-widest text-slate-400"
+        >
+          My Agency
+        </motion.h2>
         <motion.div
           initial={{ opacity: 0, y: 10 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -194,9 +211,14 @@ const CodivaSection = () => {
             <div className="w-full md:w-1/3 shrink-0">
               <h3 className="text-3xl font-extrabold text-white mb-2">Codiva.</h3>
               <p className="text-slate-400 font-medium mb-6">Code Driven by Vision</p>
-              <a href="https://codivalabs.com/" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 px-5 py-2.5 bg-white text-slate-900 rounded-md text-sm font-semibold hover:bg-slate-100 transition-colors">
-                <ExternalLink size={16} /> Visit Website
-              </a>
+              <div className="flex flex-wrap gap-3">
+                <a href="https://codivalabs.com/" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 px-5 py-2.5 bg-white text-slate-900 rounded-md text-sm font-semibold hover:bg-slate-100 transition-colors">
+                  <ExternalLink size={16} /> Visit Website
+                </a>
+                <a href="https://www.instagram.com/codiva_labs/" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 px-5 py-2.5 bg-transparent border border-slate-600 text-white rounded-md text-sm font-semibold hover:bg-slate-800 transition-colors">
+                  <InstagramIcon size={16} /> Instagram
+                </a>
+              </div>
             </div>
             <div className="w-full md:w-2/3">
               <p className="text-slate-300 leading-relaxed text-lg">
@@ -221,7 +243,15 @@ const Skills = () => {
   return (
     <section id="skills" className="py-24 bg-white border-t border-slate-200">
       <div className="max-w-4xl mx-auto px-6">
-        <h2 className="text-xl font-bold text-slate-900 mb-10 tracking-tight uppercase text-sm tracking-widest text-slate-400">Technical Skills</h2>
+        <motion.h2 
+          initial={{ opacity: 0, x: -20 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5 }}
+          className="text-xl font-bold text-slate-900 mb-10 tracking-tight uppercase text-sm tracking-widest text-slate-400"
+        >
+          Technical Skills
+        </motion.h2>
         <div className="space-y-6">
           {categories.map((cat, idx) => (
             <motion.div
@@ -282,7 +312,15 @@ const Projects = () => {
   return (
     <section id="projects" className="py-24 bg-slate-50">
       <div className="max-w-4xl mx-auto px-6">
-        <h2 className="text-xl font-bold text-slate-900 mb-10 tracking-tight uppercase text-sm tracking-widest text-slate-400">Selected Projects</h2>
+        <motion.h2 
+          initial={{ opacity: 0, x: -20 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5 }}
+          className="text-xl font-bold text-slate-900 mb-10 tracking-tight uppercase text-sm tracking-widest text-slate-400"
+        >
+          Selected Projects
+        </motion.h2>
 
         <div className="flex flex-col">
           {projects.map((proj, idx) => (
@@ -376,7 +414,15 @@ const Experience = () => {
   return (
     <section id="experience" className="py-24 bg-white border-t border-slate-200">
       <div className="max-w-4xl mx-auto px-6">
-        <h2 className="text-xl font-bold text-slate-900 mb-10 tracking-tight uppercase text-sm tracking-widest text-slate-400">Experience & Education</h2>
+        <motion.h2 
+          initial={{ opacity: 0, x: -20 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5 }}
+          className="text-xl font-bold text-slate-900 mb-10 tracking-tight uppercase text-sm tracking-widest text-slate-400"
+        >
+          Experience & Education
+        </motion.h2>
 
         {/* Experience List */}
         <div className="mb-16">
@@ -414,22 +460,32 @@ const Experience = () => {
         <div>
           <h3 className="text-lg font-bold text-slate-900 mb-8 border-b border-slate-100 pb-2">Education</h3>
           <div className="flex flex-col">
-            <div className="py-6 border-b border-slate-100 flex flex-col md:flex-row gap-6 md:gap-12">
+            <motion.div 
+              initial={{ opacity: 0, y: 10 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="py-6 border-b border-slate-100 flex flex-col md:flex-row gap-6 md:gap-12"
+            >
               <div className="w-full md:w-1/4 shrink-0 text-slate-500 text-sm font-medium pt-1">2024 – 2027</div>
               <div className="w-full md:w-3/4">
                 <h4 className="text-lg font-bold text-slate-900">BSc Computer Science</h4>
                 <div className="text-slate-600 mb-1">ASM College, Pimpri</div>
                 <div className="text-sm text-slate-500">CGPA: 8.5</div>
               </div>
-            </div>
-            <div className="py-6 flex flex-col md:flex-row gap-6 md:gap-12">
+            </motion.div>
+            <motion.div 
+              initial={{ opacity: 0, y: 10 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="py-6 flex flex-col md:flex-row gap-6 md:gap-12"
+            >
               <div className="w-full md:w-1/4 shrink-0 text-slate-500 text-sm font-medium pt-1">2021 – 2024</div>
               <div className="w-full md:w-3/4">
                 <h4 className="text-lg font-bold text-slate-900">Diploma in Information Technology</h4>
                 <div className="text-slate-600 mb-1">AISSMS Polytechnic, Pune</div>
                 <div className="text-sm text-slate-500">77.00%</div>
               </div>
-            </div>
+            </motion.div>
           </div>
         </div>
 
@@ -463,6 +519,73 @@ const Footer = () => (
   </footer>
 );
 
+const ScrollToTop = () => {
+  const [isVisible, setIsVisible] = useState(false);
+  const { scrollYProgress, scrollY } = useScroll();
+  
+  const scaleProgress = useSpring(scrollYProgress, {
+    stiffness: 100,
+    damping: 30,
+    restDelta: 0.001
+  });
+
+  useEffect(() => {
+    return scrollY.onChange((latest) => {
+      if (latest > 300) {
+        setIsVisible(true);
+      } else {
+        setIsVisible(false);
+      }
+    });
+  }, [scrollY]);
+
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
+  };
+
+  const circleRadius = 22;
+
+  return (
+    <motion.button
+      initial={{ opacity: 0, scale: 0.8 }}
+      animate={{ opacity: isVisible ? 1 : 0, scale: isVisible ? 1 : 0.8 }}
+      transition={{ duration: 0.2 }}
+      onClick={scrollToTop}
+      className={`fixed bottom-8 right-8 w-14 h-14 flex items-center justify-center rounded-full bg-white text-slate-900 shadow-xl hover:bg-slate-50 transition-colors z-50 ${isVisible ? 'pointer-events-auto' : 'pointer-events-none'}`}
+      aria-label="Scroll to top"
+    >
+      {/* SVG Background/Progress Circle */}
+      <svg className="absolute inset-0 w-full h-full -rotate-90 pointer-events-none" viewBox="0 0 56 56">
+        <circle
+          cx="28"
+          cy="28"
+          r={circleRadius}
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="3"
+          className="text-slate-200"
+        />
+        <motion.circle
+          cx="28"
+          cy="28"
+          r={circleRadius}
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="3"
+          style={{ pathLength: scaleProgress }}
+          className="text-blue-500"
+          strokeLinecap="round"
+        />
+      </svg>
+      {/* Icon */}
+      <ArrowUp size={20} className="relative z-10" />
+    </motion.button>
+  );
+};
+
 function App() {
   return (
     <div className="bg-slate-50 min-h-screen text-slate-900 font-sans selection:bg-slate-200 selection:text-slate-900 relative">
@@ -476,6 +599,7 @@ function App() {
         <Experience />
       </main>
       <Footer />
+      <ScrollToTop />
     </div>
   );
 }
