@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion, useScroll, useSpring } from 'framer-motion';
+import { NotFound } from './components/NotFound';
 import {
   Terminal,
   Database,
@@ -587,6 +588,32 @@ const ScrollToTop = () => {
 };
 
 function App() {
+  const [currentPath, setCurrentPath] = useState(
+    typeof window !== 'undefined' ? window.location.pathname : '/'
+  );
+
+  useEffect(() => {
+    const handlePopState = () => {
+      setCurrentPath(window.location.pathname);
+    };
+    window.addEventListener('popstate', handlePopState);
+    return () => window.removeEventListener('popstate', handlePopState);
+  }, []);
+
+  const handleNavigateHome = () => {
+    if (window.location.pathname !== '/') {
+      window.history.pushState({}, '', '/');
+    }
+    setCurrentPath('/');
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
+  const isKnownRoute = currentPath === '/' || currentPath === '' || currentPath === '/index.html';
+
+  if (!isKnownRoute) {
+    return <NotFound onNavigateHome={handleNavigateHome} />;
+  }
+
   return (
     <div className="bg-slate-50 min-h-screen text-slate-900 font-sans selection:bg-slate-200 selection:text-slate-900 relative">
       <div className="noise-bg"></div>
