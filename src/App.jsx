@@ -142,9 +142,9 @@ const TypewriterHeading = () => {
   }, [currentText, isDeleting, currentPhraseIndex, phrases]);
 
   return (
-    <motion.h1 variants={fadeIn} className="text-4xl md:text-6xl font-extrabold tracking-tight text-slate-900 leading-[1.2] mb-6">
+    <motion.h1 variants={fadeIn} className="text-4xl md:text-6xl font-extrabold tracking-tight text-slate-900 leading-[1.2] mb-6 font-sans">
       Hi, I'm <span className="text-transparent bg-clip-text bg-gradient-to-r from-slate-900 via-slate-700 to-slate-900">Prajwal</span>.<br />
-      <span className="text-slate-500 font-semibold">
+      <span className="text-slate-500 font-normal">
         {currentText}
       </span>
       <span className="text-slate-400 animate-[pulse_1s_ease-in-out_infinite] font-light">|</span>
