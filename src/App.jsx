@@ -109,7 +109,13 @@ const NavBar = () => {
 };
 
 const TypewriterHeading = () => {
-  const phrases = ["Full Stack Developer", "AI Engineer", "GenAI Engineer", "Data Scientist", "Codiva Founder"];
+  const phrases = [
+    "Full-Stack Engineer",
+    "SaaS & AI Builder",
+    "GenAI & Automation Developer",
+    "Founder @ Codiva & TurfFlow",
+    "B.Sc. CS Student"
+  ];
   const [currentPhraseIndex, setCurrentPhraseIndex] = useState(0);
   const [currentText, setCurrentText] = useState("");
   const [isDeleting, setIsDeleting] = useState(false);
@@ -168,9 +174,7 @@ const Hero = () => (
         <TypewriterHeading />
 
         <motion.p variants={fadeIn} className="text-lg text-slate-600 leading-relaxed max-w-2xl mb-10">
-          A Computer Science student and Full Stack Developer based in Pune, India.
-          I specialize in building robust web applications using the MERN stack and have a strong focus on clean architecture and scalable solutions. Currently exploring Machine Learning and Generative AI.
-          Crafting pixel-perfect, high-performance web experiences as Founder & Frontend Lead at Codiva.
+          A Computer Science student and Full-Stack Engineer based in Pune, India. I architect production-grade web applications, vertical SaaS platforms, and autonomous AI workflows—from concurrency-safe booking engines to zero-cost serverless publishing pipelines. Founder of Codiva Labs and TurfFlow, and Co-Founder of RVOLX, building scalable software and live digital products.
         </motion.p>
 
         <motion.div variants={fadeIn} className="flex flex-wrap gap-4 text-sm font-medium">
@@ -211,20 +215,42 @@ const CodivaSection = () => {
           <div className="flex flex-col md:flex-row gap-8 items-start">
             <div className="w-full md:w-1/3 shrink-0">
               <h3 className="text-3xl font-extrabold text-white mb-2">Codiva.</h3>
-              <p className="text-slate-400 font-medium mb-6">Code Driven by Vision</p>
+              <p className="text-slate-400 font-medium mb-6">Founder & Full-Stack Lead</p>
               <div className="flex flex-wrap gap-3">
-                <a href="https://codivalabs.com/" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 px-5 py-2.5 bg-white text-slate-900 rounded-md text-sm font-semibold hover:bg-slate-100 transition-colors">
+                <a href="https://codivalabs.com" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 px-5 py-2.5 bg-white text-slate-900 rounded-md text-sm font-semibold hover:bg-slate-100 transition-colors">
                   <ExternalLink size={16} /> Visit Website
                 </a>
-                <a href="https://www.instagram.com/codiva_labs/" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 px-5 py-2.5 bg-transparent border border-slate-600 text-white rounded-md text-sm font-semibold hover:bg-slate-800 transition-colors">
+                <a href="https://instagram.com/codiva_labs" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 px-5 py-2.5 bg-transparent border border-slate-600 text-white rounded-md text-sm font-semibold hover:bg-slate-800 transition-colors">
                   <InstagramIcon size={16} /> Instagram
                 </a>
               </div>
             </div>
             <div className="w-full md:w-2/3">
-              <p className="text-slate-300 leading-relaxed text-lg">
-                We craft premium, scalable web solutions designed to drive business growth and elevate user engagement. As Founder and Frontend Lead, I oversee the end-to-end development of high-performance digital platforms, delivering everything from custom, feature-rich web applications to SEO-optimized, modern digital branding experiences.
+              <p className="text-slate-300 leading-relaxed text-lg mb-6">
+                Founded a software and web engineering studio delivering production-ready web platforms, custom booking systems, and AI automation pipelines for businesses. Shipped live commercial websites for multi-branch fitness brands, salons, and agencies alongside 12+ interactive industry showcases—backed by an autonomous $0/month serverless content engine running daily on @codiva_labs.
               </p>
+              <div className="pt-4 border-t border-slate-700/60 flex flex-col gap-3 text-sm text-slate-400">
+                <div className="flex flex-wrap items-center gap-x-2 gap-y-1">
+                  <span className="text-slate-300 font-medium">Interactive Portfolio:</span>
+                  <a href="https://codivalabs.com/portfolio" target="_blank" rel="noreferrer" className="text-blue-400 hover:text-blue-300 transition-colors inline-flex items-center gap-1 font-medium">
+                    12 Live Demos <ExternalLink size={13} />
+                  </a>
+                </div>
+                <div className="flex flex-wrap items-center gap-x-3 gap-y-1">
+                  <span className="text-slate-300 font-medium">Live Client Sites:</span>
+                  <a href="https://www.powerupfitness.co.in/" target="_blank" rel="noreferrer" className="hover:text-slate-200 underline decoration-slate-600 underline-offset-2 transition-colors">
+                    Power Up Fitness
+                  </a>
+                  <span className="text-slate-600">•</span>
+                  <a href="https://artistabysupriya.com/" target="_blank" rel="noreferrer" className="hover:text-slate-200 underline decoration-slate-600 underline-offset-2 transition-colors">
+                    Artista Salon
+                  </a>
+                  <span className="text-slate-600">•</span>
+                  <a href="https://theadsarchitect.netlify.app/" target="_blank" rel="noreferrer" className="hover:text-slate-200 underline decoration-slate-600 underline-offset-2 transition-colors">
+                    The Ads Architects
+                  </a>
+                </div>
+              </div>
             </div>
           </div>
         </motion.div>
@@ -235,10 +261,10 @@ const CodivaSection = () => {
 
 const Skills = () => {
   const categories = [
-    { title: "Frontend", skills: ["React.js", "JavaScript", "HTML5", "CSS3", "Tailwind CSS", "Bootstrap", "MUI", "Chart.js"] },
-    { title: "Backend", skills: ["Node.js", "Express.js", "REST APIs", "MongoDB", "PostgreSQL", "MySQL"] },
-    { title: "AI / ML", skills: ["Python", "NumPy", "Pandas", "Scikit-learn", "PyTorch", "TensorFlow", "Keras"] },
-    { title: "DevOps & Tools", skills: ["Docker", "Kubernetes", "CI/CD", "Git", "GitHub", "Postman", "Render", "Vercel"] }
+    { title: "Frontend", skills: ["React 18", "Next.js 14", "TypeScript", "JavaScript (ES6+)", "Tailwind CSS", "HTML5", "CSS3", "MUI", "Chart.js"] },
+    { title: "Backend", skills: ["Node.js", "Express.js", "PostgreSQL", "Supabase", "MongoDB", "MySQL", "Redis", "REST APIs"] },
+    { title: "AI / ML", skills: ["Python", "Google Gemini API", "PyTorch", "TensorFlow", "Scikit-learn", "NumPy", "Pandas", "n8n", "Meta Graph API"] },
+    { title: "DevOps & Tools", skills: ["GitHub Actions", "Docker", "Kubernetes", "CI/CD", "Razorpay API", "Git", "GitHub", "Vercel", "Render"] }
   ];
 
   return (
@@ -284,29 +310,51 @@ const Skills = () => {
 const Projects = () => {
   const projects = [
     {
-      title: "HemaLens",
-      subtitle: "AI Blood Report Analyzer",
-      description: "Developed an AI-powered web application to analyze blood report images and extract key biomarkers. Integrated Google Gemini AI to generate simplified medical insights in English and Hindi with personalized dietary recommendations.",
-      tags: ["Node.js", "Express.js", "JavaScript", "Gemini AI"],
-      highlight: "Hackathon Runner-Up",
+      title: "TurfFlow — Multi-Sport Arena SaaS & WhatsApp Booking Engine",
+      subtitle: "Omnichannel Sports Arena Management & Automated Reservation Engine",
+      description: "Founded and engineered an enterprise sports turf management and omnichannel booking platform supporting web and natural-language WhatsApp (English/Hinglish) reservations. Solves double-booking race conditions via 5-minute Redis distributed slot locks, integrates Razorpay with webhook idempotency and late-capture auto-refunds, generates 4-digit QR Gate Passes, and automates dynamic pricing, rainout cancellations, and monthly owner financial ledgers—validated by a 38-case edge-test suite.",
+      tags: ["React 18", "TypeScript", "Node.js", "Express", "PostgreSQL", "Supabase", "Redis", "Razorpay", "Baileys + n8n"],
+      highlight: "🚀 Founder · Flagship B2B SaaS",
+      github: null,
+      demo: "https://turfflow-codiva.vercel.app/",
+      instagram: "https://instagram.com/turf_flow"
+    },
+    {
+      title: "RVOLX — Institutional Intraday Quantitative Signals Platform",
+      subtitle: "Quantitative Trading Signals Engine & Ultra-Low-Latency Delivery",
+      description: "Co-founded a multi-tenant quantitative trading signals SaaS for NSE NIFTY 200 cash equities firing at 09:30 AM IST using Relative Volume (RVOL >= 2.5x), 14-period ATR volatility corridors, and strict >=1:2 Risk-to-Reward filters. Engineered an air-gapped HMAC-SHA256 signal ingestion bridge (<15ms latency), 3-tier RBAC across 4 web portals, and sub-450ms consent-verified WhatsApp alert delivery.",
+      tags: ["Next.js 14", "TypeScript", "PostgreSQL 18", "HMAC-SHA256", "Baileys WhatsApp", "Razorpay"],
+      highlight: "📈 Co-Founder · FinTech SaaS",
+      github: null,
+      demo: "https://rvolx.netlify.app/",
+      instagram: "https://instagram.com/rvol_x"
+    },
+    {
+      title: "Codiva Autonomous Media Engine — Serverless AI Content Pipeline",
+      subtitle: "Autonomous Cloud Publishing & Multi-Model Generation System",
+      description: "Fully autonomous cloud publishing system executing a 90-day MERN stack curriculum (2 daily posts) on @codiva_labs at $0.00/month infrastructure cost. Uses ephemeral GitHub Actions cron runners, Git-as-a-database state tracking, a multi-model Gemini fallback chain, native C++ SVG-to-PNG rasterization (<150ms renders), and direct Meta Graph API publishing.",
+      tags: ["Node.js", "GitHub Actions", "Google Gemini API", "@resvg/resvg-js", "Meta Graph API v23.0"],
+      highlight: "⚡ $0/mo Serverless System",
+      github: "https://github.com/prajwalnangare01/codiva_automation",
+      demo: "https://instagram.com/codiva_labs"
+    },
+    {
+      title: "HemaLens — AI Blood Report Analyzer",
+      subtitle: "AI Medical Diagnostic & Biomarker Analysis Tool",
+      description: "AI-powered app that analyzes blood test report images, extracts biomarkers, and generates simplified medical insights in English & Hindi with personalized dietary recommendations.",
+      tags: ["Node.js", "Express.js", "JavaScript", "Google Gemini AI"],
+      highlight: "🏆 Hackathon Runner-Up",
       github: "https://github.com/prajwalnangare01/HemaLens",
       demo: null
     },
     {
-      title: "Wanderlust",
-      subtitle: "Airbnb Clone",
-      description: "Built a full-stack travel and property booking platform. Features secure user authentication, property listings, and secure cloud-based image storage via Cloudinary. Deployed on Render with MongoDB Atlas.",
-      tags: ["MongoDB", "Express.js", "React.js", "Node.js"],
-      github: "https://github.com/prajwalnangare01/WanderLust",
-      demo: "https://wanderlust-lwq5.onrender.com/listings"
-    },
-    {
-      title: "Weather App",
-      subtitle: "Real-Time Weather Forecaster",
-      description: "A dynamic and responsive weather application that fetches and displays real-time weather data. Features a clean, modern user interface for checking current conditions, temperatures, and detailed meteorological metrics across different locations.",
-      tags: ["JavaScript", "HTML5", "CSS3", "API Integration"],
-      github: "https://github.com/prajwalnangare01/WeatherApp",
-      demo: "https://weatherappprajwal.netlify.app/"
+      title: "Prosperia — AI Real Estate Lead & Revenue Recovery SaaS",
+      subtitle: "Real Estate Lead Qualification & Automated Pipeline CRM",
+      description: "AI-powered SaaS platform built for real estate agencies and property developers to capture and qualify buyer/tenant leads, automate follow-ups, schedule property visits, and recover missed pipeline revenue.",
+      tags: ["React", "Node.js", "AI Lead Qualification", "CRM Automation"],
+      highlight: null,
+      github: null,
+      demo: null
     }
   ];
 
@@ -337,7 +385,7 @@ const Projects = () => {
                 <p className="text-slate-500 text-sm mt-1 mb-4">{proj.subtitle}</p>
                 {proj.highlight && (
                   <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-sm bg-slate-200/50 text-slate-700 text-xs font-semibold">
-                    <Trophy size={12} /> {proj.highlight}
+                    {proj.highlight}
                   </span>
                 )}
               </div>
@@ -362,6 +410,11 @@ const Projects = () => {
                   {proj.demo && (
                     <a href={proj.demo} target="_blank" rel="noreferrer" className="flex items-center gap-2 text-sm font-semibold text-slate-700 hover:text-slate-900 transition-colors">
                       <ExternalLink size={16} /> Live Demo
+                    </a>
+                  )}
+                  {proj.instagram && (
+                    <a href={proj.instagram} target="_blank" rel="noreferrer" className="flex items-center gap-2 text-sm font-semibold text-slate-700 hover:text-slate-900 transition-colors">
+                      <InstagramIcon size={16} /> Instagram
                     </a>
                   )}
                 </div>
@@ -392,6 +445,15 @@ const Projects = () => {
 
 const Experience = () => {
   const experiences = [
+    {
+      role: "Founder @ Codiva Labs & TurfFlow | Co-Founder @ RVOLX",
+      company: "Full-Stack Lead & Architecture",
+      date: "Oct 2024 – Present",
+      points: [
+        "Founded and architected TurfFlow, an omnichannel sports arena SaaS with web and WhatsApp booking, distributed slot locking, and Razorpay integration.",
+        "Co-founded RVOLX (FinTech signals SaaS) and engineered a $0/month serverless AI publishing pipeline on GitHub Actions and Meta Graph API, alongside shipping live websites for commercial clients."
+      ]
+    },
     {
       role: "Frontend Implementation Intern",
       company: "Parplaero",

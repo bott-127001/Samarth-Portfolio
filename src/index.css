@@ -1,21 +1,8 @@
 @import "tailwindcss";
 
-@font-face {
-  font-family: 'Kalice';
-  src: url('/fonts/kalice.woff2') format('woff2'),
-       url('/fonts/kalice.woff') format('woff'),
-       url('https://db.onlinewebfonts.com/t/3dd98a930e4e741d6d09cd53613ff641.woff2') format('woff2');
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
-
 @theme {
-  --font-sans: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-  --font-serif: 'Kalice', Georgia, Cambria, 'Times New Roman', Times, serif;
-  --font-display: 'Kalice', Georgia, serif;
-  --font-kalice: 'Kalice', Georgia, serif;
-  --font-inter: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-sans: 'Geist', 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-mono: 'Geist Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
 
   --color-slate-50: #f8fafc;
   --color-slate-100: #f1f5f9;
@@ -30,9 +17,9 @@
     @apply bg-slate-50 text-slate-900 antialiased overflow-x-hidden;
   }
 
-  h2, h3, h4, .font-serif, .font-display, .font-kalice {
-    font-family: var(--font-serif);
-    font-weight: 700;
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-sans);
+    letter-spacing: -0.025em;
   }
 }
 
