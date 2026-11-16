@@ -367,10 +367,19 @@ const Projects = () => {
     },
     {
       title: "Prosperia — AI Real Estate Lead & Revenue Recovery SaaS",
-      subtitle: "Real Estate Lead Qualification & Automated Pipeline CRM",
-      description: "AI-powered SaaS platform built for real estate agencies and property developers to capture and qualify buyer/tenant leads, automate follow-ups, schedule property visits, and recover missed pipeline revenue.",
-      tags: ["React", "Node.js", "AI Lead Qualification", "CRM Automation"],
-      highlight: null,
+      subtitle: "AI PropTech Lead Qualification, Calendar Scheduler & Pipeline CRM",
+      description: "Autonomous customer acquisition and pipeline revenue recovery SaaS engineered for real estate agencies and developers. Features omnichannel conversational lead capture and qualification via Groq Llama 3.3 and Gemini tool contracts, semantic property inventory matching using pgvector, automated site visit booking with two-way calendar sync, and dormant CRM lead re-activation campaigns.",
+      tags: ["React 18", "Node.js", "Express", "PostgreSQL", "Supabase RLS", "pgvector", "Groq AI", "Meta APIs"],
+      highlight: "🏢 PropTech AI SaaS",
+      github: null,
+      demo: null
+    },
+    {
+      title: "Aladin — SMC-Based XAUUSD Forex Technical Indicator",
+      subtitle: "Smart Money Concepts (SMC) Institutional Gold Market Structure Engine",
+      description: "Institutional-grade Forex technical analysis engine engineered specifically for XAUUSD (Gold / US Dollar) spot price action. Formulates automated Change of Character (CHOCH) structural trend reversals, detects resting Trendline Liquidity (TJL) retail stop clusters, and confirms high-probability mitigation entries using multi-timeframe Order Blocks and 3-candle Fair Value Gaps (FVG).",
+      tags: ["Pine Script v5", "TypeScript", "Algorithmic Trading", "Smart Money Concepts (SMC)", "Technical Analysis"],
+      highlight: "⚡ Institutional Forex Indicator",
       github: null,
       demo: null
     }
