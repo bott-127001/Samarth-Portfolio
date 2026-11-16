@@ -245,7 +245,7 @@ const CodivaSection = () => {
                   <span className="text-slate-600">•</span>
                   <span className="text-slate-300">RVOLX</span>
                   <span className="text-slate-600">•</span>
-                  <span className="text-slate-300">Aladin</span>
+                  <span className="text-slate-300">Aladin <span className="text-[11px] text-amber-400 font-medium">(Coming Soon)</span></span>
                   <span className="text-slate-600">•</span>
                   <span className="text-slate-300">Prosperia</span>
                 </div>
@@ -387,11 +387,12 @@ const Projects = () => {
     {
       title: "Aladin — SMC-Based XAUUSD Forex Technical Indicator",
       subtitle: "Smart Money Concepts (SMC) Institutional Gold Market Structure Engine",
-      description: "Launched under Codiva Labs as an institutional-grade Forex technical analysis engine engineered specifically for XAUUSD (Gold / US Dollar) spot price action. Formulates automated Change of Character (CHOCH) structural trend reversals, detects resting Trendline Liquidity (TJL) retail stop clusters, and confirms high-probability mitigation entries using multi-timeframe Order Blocks and 3-candle Fair Value Gaps (FVG).",
+      description: "Built for quantitative and algorithmic Forex traders to identify high-probability institutional setups on XAUUSD (Gold / US Dollar). In active development under Codiva Labs, the engine formulates automated Change of Character (CHOCH) structural trend reversals, detects resting Trendline Liquidity (TJL) retail stop clusters, and confirms high-probability mitigation entries using multi-timeframe Order Blocks and 3-candle Fair Value Gaps (FVG).",
       tags: ["Pine Script v5", "TypeScript", "Algorithmic Trading", "Smart Money Concepts (SMC)", "Technical Analysis"],
-      highlight: "⚡ Codiva Venture · Institutional Forex Indicator",
+      highlight: "⏳ Coming Soon · Institutional Forex Indicator",
       github: null,
-      demo: null
+      demo: null,
+      comingSoon: true
     }
   ];
 
@@ -454,6 +455,11 @@ const Projects = () => {
                       <InstagramIcon size={16} /> Instagram
                     </a>
                   )}
+                  {proj.comingSoon && (
+                    <span className="inline-flex items-center gap-1.5 text-xs font-semibold text-amber-700 bg-amber-50 border border-amber-200/80 px-2.5 py-1 rounded-sm">
+                      <span className="w-1.5 h-1.5 rounded-full bg-amber-500 animate-pulse" /> Coming Soon
+                    </span>
+                  )}
                 </div>
               </div>
             </motion.div>
@@ -487,10 +493,18 @@ const Experience = () => {
       company: "Codiva Labs",
       date: "Jul 2025 – Present",
       points: [
-        "What is Codiva: Founded a digital product and software engineering agency delivering custom full-stack web platforms, vertical SaaS architectures, and autonomous AI automation systems for businesses and startups.",
-        "Services Offered: End-to-end full-stack development (React, Next.js, Node.js, PostgreSQL/Supabase), custom SaaS product engineering, conversational WhatsApp AI bots (Baileys + n8n), payment gateway integrations (Razorpay), and high-conversion commercial web design.",
-        "Clients & Demos Delivered: Shipped 3+ production commercial client platforms (Power Up Fitness, Artista Salon, The Ads Architects) and engineered an interactive showcase of 12+ live prototype demos across various industry verticals.",
-        "Proprietary Ventures & Automation: Incubated 4 in-house flagship products (TurfFlow, RVOLX, Aladin, Prosperia) and built an autonomous $0/month serverless AI content pipeline running daily on GitHub Actions and Meta Graph API (@codiva_labs)."
+        <>
+          <strong className="text-slate-900 font-semibold">What is Codiva:</strong> Founded a <strong className="text-slate-900 font-semibold">digital product and software engineering agency</strong> delivering custom full-stack web platforms, vertical SaaS architectures, and autonomous AI automation systems for businesses and startups.
+        </>,
+        <>
+          <strong className="text-slate-900 font-semibold">Services Offered:</strong> End-to-end <strong className="text-slate-900 font-semibold">Full-Stack Web Development</strong> (React, Next.js, Node.js, PostgreSQL/Supabase), <strong className="text-slate-900 font-semibold">Custom SaaS Product Engineering</strong>, <strong className="text-slate-900 font-semibold">Conversational WhatsApp AI Bots</strong> (Baileys + n8n), <strong className="text-slate-900 font-semibold">Payment Gateway Integrations</strong> (Razorpay), and <strong className="text-slate-900 font-semibold">High-Conversion Commercial Web Design</strong>.
+        </>,
+        <>
+          <strong className="text-slate-900 font-semibold">Clients & Demos Delivered:</strong> Shipped <strong className="text-slate-900 font-semibold">3+ production commercial client platforms</strong> (<a href="https://www.powerupfitness.co.in/" target="_blank" rel="noreferrer" className="underline decoration-slate-400 hover:text-slate-900">Power Up Fitness</a>, <a href="https://artistabysupriya.com/" target="_blank" rel="noreferrer" className="underline decoration-slate-400 hover:text-slate-900">Artista Salon</a>, <a href="https://theadsarchitect.netlify.app/" target="_blank" rel="noreferrer" className="underline decoration-slate-400 hover:text-slate-900">The Ads Architects</a>) and engineered an interactive showcase of <strong className="text-slate-900 font-semibold">12+ live prototype demos</strong> across various industry verticals.
+        </>,
+        <>
+          <strong className="text-slate-900 font-semibold">Proprietary Ventures & Automation:</strong> Incubated <strong className="text-slate-900 font-semibold">4 in-house flagship products</strong> (<strong className="text-slate-900 font-semibold">TurfFlow</strong>, <strong className="text-slate-900 font-semibold">RVOLX</strong>, <strong className="text-slate-900 font-semibold">Aladin</strong>, <strong className="text-slate-900 font-semibold">Prosperia</strong>) and built an autonomous <strong className="text-slate-900 font-semibold">$0/month serverless AI content pipeline</strong> running daily on GitHub Actions and Meta Graph API (@codiva_labs).
+        </>
       ]
     },
     {
