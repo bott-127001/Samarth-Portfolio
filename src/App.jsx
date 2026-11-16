@@ -345,7 +345,7 @@ const Projects = () => {
       subtitle: "Hand-Coded Skeletal Kinematics & Real-Time Rep-Counting Engine",
       description: "Hand-coded completely from scratch without AI assistance to master core Python, MediaPipe Pose Landmarker, and WebRTC streaming. Calculates joint trigonometry angles in real time to monitor valid repetitions and posture across 5 exercises (squats, push-ups, curls, shoulder press, lunges), provides spoken corrective audio feedback via Groq (Llama 3.3) and gTTS, and logs workout histories in SQLite.",
       tags: ["Python", "MediaPipe", "WebRTC", "Trigonometry / Geometry", "Streamlit", "SQLite", "Groq (Llama 3.3)"],
-      highlight: "💻 Written Without AI",
+      highlight: "Written Without AI",
       github: "https://github.com/prajwalnangare01/AI-Gym-Coach",
       demo: "https://ai-gym-coach-ktsskhrh7kk6vc9uxjpkum.streamlit.app/"
     },
@@ -356,7 +356,7 @@ const Projects = () => {
       subtitle: "Hand-Coded Asynchronous JavaScript & REST API Weather Engine",
       description: "Hand-coded from scratch without AI to master foundational vanilla JavaScript, asynchronous DOM manipulation, and browser APIs. Features real-time atmospheric data fetching via WeatherAPI, automatic HTML5 Geolocation detection, dynamic gradient UI transitions, background weather videos, and a fully responsive layout built with pure CSS3 Flexbox.",
       tags: ["JavaScript (Vanilla)", "HTML5", "CSS3 Flexbox", "WeatherAPI", "DOM Manipulation", "Async / Fetch API"],
-      highlight: "💻 Written Without AI",
+      highlight: "Written Without AI",
       github: "https://github.com/prajwalnangare01/WeatherApp",
       demo: "https://weatherappprajwal.netlify.app/"
     },
@@ -479,7 +479,7 @@ const Projects = () => {
             }`}
           >
             <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" />
-            💻 Written Without AI ({handCodedCount})
+            Written Without AI ({handCodedCount})
           </button>
           <button
             onClick={() => setActiveCategory("saas")}
