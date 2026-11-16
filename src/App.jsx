@@ -361,6 +361,17 @@ const Projects = () => {
       demo: "https://weatherappprajwal.netlify.app/"
     },
     {
+      id: "wanderlust",
+      category: "hand-coded",
+      title: "WanderLust — Full-Stack Vacation Rental & Property Listing Platform",
+      subtitle: "Hand-Coded Full-Stack MVC Architecture & Authentication System",
+      description: "Hand-coded completely from scratch without AI assistance to master full-stack MVC design patterns, relational document modeling, and server-side rendering. Built for travelers and property hosts to discover, list, and review vacation rentals with secure cookie-based session authentication via Passport.js, Cloudinary media storage, Mapbox geolocation, and full CRUD operations on MongoDB Atlas.",
+      tags: ["Node.js", "Express.js", "MongoDB", "Mongoose", "EJS", "Bootstrap 5", "Passport.js", "Cloudinary"],
+      highlight: "Written Without AI",
+      github: "https://github.com/prajwalnangare01/WanderLust",
+      demo: null
+    },
+    {
       id: "turfflow",
       category: "saas",
       title: "TurfFlow — Multi-Sport Arena SaaS & WhatsApp Booking Engine",
@@ -472,13 +483,12 @@ const Projects = () => {
           </button>
           <button
             onClick={() => setActiveCategory("hand-coded")}
-            className={`px-4 py-2 rounded-lg text-xs font-semibold transition-all flex items-center gap-1.5 ${
+            className={`px-4 py-2 rounded-lg text-xs font-semibold transition-all ${
               activeCategory === "hand-coded"
                 ? "bg-emerald-700 text-white shadow-sm"
                 : "bg-white border border-emerald-300/80 text-emerald-800 hover:bg-emerald-50"
             }`}
           >
-            <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" />
             Written Without AI ({handCodedCount})
           </button>
           <button
