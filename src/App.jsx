@@ -68,9 +68,19 @@ const NavBar = () => {
   return (
     <nav className="fixed top-0 inset-x-0 z-50 bg-white/80 backdrop-blur-md border-b border-slate-200">
       <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
-        <span className="font-bold text-lg tracking-tight text-slate-900">
+        <a
+          href="/"
+          onClick={(e) => {
+            e.preventDefault();
+            if (window.location.hash || window.location.pathname !== '/') {
+              window.history.pushState(null, '', '/');
+            }
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+          }}
+          className="font-bold text-lg tracking-tight text-slate-900 hover:text-slate-700 transition-colors cursor-pointer"
+        >
           Prajwal Nangare.
-        </span>
+        </a>
         <div className="hidden md:flex gap-8 text-sm font-medium text-slate-600">
           <a href="#about" className="hover:text-slate-900 transition-colors">About</a>
           <a href="#skills" className="hover:text-slate-900 transition-colors">Skills</a>
