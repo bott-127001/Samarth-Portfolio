@@ -295,7 +295,7 @@ const CodivaSection = () => {
 
 const Skills = () => {
   const categories = [
-    { title: "Frontend", skills: ["React", "Next.js", "TypeScript", "JavaScript", "Tailwind CSS", "HTML5", "CSS3", "MUI"] },
+    { title: "Frontend", skills: ["React", "Next.js", "JavaScript", "Tailwind CSS", "HTML5", "CSS3", "MUI"] },
     { title: "Backend", skills: ["Node.js", "Express.js", "PostgreSQL", "Supabase", "MongoDB", "MySQL", "Redis"] },
     { title: "AI / ML", skills: ["Python", "Generative AI", "Agentic AI", "RAG", "GANs", "Deep Learning", "Machine Learning", "PyTorch", "TensorFlow", "Scikit-learn", "MediaPipe", "n8n"] },
     { title: "DevOps & Tools", skills: ["GitHub Actions", "Docker", "Kubernetes", "CI/CD", "Git", "GitHub", "Vercel", "Render"] }
@@ -387,7 +387,7 @@ const Projects = () => {
       title: "TurfFlow — Multi-Sport Arena SaaS & WhatsApp Booking Engine",
       subtitle: "Omnichannel Sports Arena Management & Automated Reservation Engine",
       description: "Launched under Codiva Labs for sports arena and box cricket turf operators to completely automate customer reservations, payments, and daily facility operations without manual staff or phone calls. Enables players to check availability and book instantly via web or conversational WhatsApp (English/Hinglish). Solves double-booking race conditions through 5-minute Redis distributed slot locks, automates Razorpay payments with webhook idempotency and late-capture auto-refunds, generates 4-digit QR Gate Passes, and automates dynamic pricing, rainout cancellations, and monthly owner financial ledgers.",
-      tags: ["React", "TypeScript", "Node.js", "Express", "PostgreSQL", "Supabase", "Redis", "Razorpay", "Baileys + n8n"],
+      tags: ["React", "Node.js", "Express", "PostgreSQL", "Supabase", "Redis", "Razorpay", "Baileys + n8n"],
       highlight: "🚀 Codiva Venture · Flagship B2B SaaS",
       github: null,
       demo: "https://turfflow-codiva.vercel.app/",
@@ -444,7 +444,7 @@ const Projects = () => {
       title: "Aladin — SMC-Based XAUUSD Forex Technical Indicator",
       subtitle: "Smart Money Concepts (SMC) Institutional Gold Market Structure Engine",
       description: "Built under Codiva Labs (currently in active development), Aladin is an algorithmic technical indicator designed specifically for trading XAUUSD (Gold / US Dollar). It analyzes market structure (trend), Change of Character (CHOCH), and Trend Joining Levels (TJL) to generate clear, rule-based buy and sell signals.",
-      tags: ["Pine Script", "TypeScript", "Algorithmic Trading", "Smart Money Concepts (SMC)", "Technical Analysis"],
+      tags: ["Pine Script", "Algorithmic Trading", "Smart Money Concepts (SMC)", "Technical Analysis"],
       highlight: "⏳ Coming Soon · Institutional Forex Indicator",
       github: null,
       demo: null,
