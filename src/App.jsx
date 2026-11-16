@@ -79,7 +79,7 @@ const NavBar = () => {
           }}
           className="font-bold text-lg tracking-tight text-slate-900 hover:text-slate-700 transition-colors cursor-pointer"
         >
-          Prajwal Nangare.
+          Samarth Salgar.
         </a>
         <div className="hidden md:flex gap-8 text-sm font-medium text-slate-600">
           <a href="#about" className="hover:text-slate-900 transition-colors">About</a>
@@ -91,7 +91,7 @@ const NavBar = () => {
           <a href="https://drive.google.com/file/d/1WoJXm3SudfZcmgo2Ih7qESa07HV4EzCf/view" target="_blank" rel="noreferrer" className="hidden md:flex items-center gap-1.5 px-4 py-2 text-sm font-medium text-slate-600 hover:text-slate-900 transition-colors">
             <FileText size={16} /> Resume
           </a>
-          <a href="mailto:prajwalnangare41@gmail.com" className="hidden md:inline-flex px-4 py-2 text-sm font-medium bg-slate-900 text-white rounded-md hover:bg-slate-800 transition-colors">
+          <a href="mailto:samarthsalgar02@gmail.com" className="hidden md:inline-flex px-4 py-2 text-sm font-medium bg-slate-900 text-white rounded-md hover:bg-slate-800 transition-colors">
             Contact Me
           </a>
           <button className="md:hidden p-2 text-slate-600" onClick={() => setIsOpen(!isOpen)}>
@@ -115,7 +115,7 @@ const NavBar = () => {
           <a href="https://drive.google.com/file/d/1WoJXm3SudfZcmgo2Ih7qESa07HV4EzCf/view" target="_blank" rel="noreferrer" onClick={() => setIsOpen(false)} className="flex items-center gap-2 text-slate-600 font-medium">
             <FileText size={16} /> Resume
           </a>
-          <a href="mailto:prajwalnangare41@gmail.com" onClick={() => setIsOpen(false)} className="inline-flex justify-center w-full px-4 py-3 text-sm font-medium bg-slate-900 text-white rounded-md hover:bg-slate-800 transition-colors">
+          <a href="mailto:samarthsalgar02@gmail.com" onClick={() => setIsOpen(false)} className="inline-flex justify-center w-full px-4 py-3 text-sm font-medium bg-slate-900 text-white rounded-md hover:bg-slate-800 transition-colors">
             Contact Me
           </a>
         </motion.div>
@@ -165,7 +165,7 @@ const TypewriterHeading = () => {
 
   return (
     <motion.h1 variants={fadeIn} className="text-4xl md:text-6xl font-extrabold tracking-tight text-slate-900 leading-[1.2] mb-6 font-sans">
-      Hi, I'm <span className="text-transparent bg-clip-text bg-gradient-to-r from-slate-900 via-slate-700 to-slate-900">Prajwal</span>.<br />
+      Hi, I'm <span className="text-transparent bg-clip-text bg-gradient-to-r from-slate-900 via-slate-700 to-slate-900">Samarth</span>.<br />
       <span className="text-slate-500 font-normal">
         {currentText}
       </span>
@@ -200,11 +200,8 @@ const Hero = () => (
           <a href="https://drive.google.com/file/d/1WoJXm3SudfZcmgo2Ih7qESa07HV4EzCf/view" target="_blank" rel="noreferrer" className="px-6 py-3 rounded-md bg-white text-slate-900 border border-slate-300 hover:bg-slate-50 transition-colors flex items-center gap-2 shadow-sm">
             <FileText size={16} /> View Resume
           </a>
-          <a href="https://github.com/prajwalnangare01" target="_blank" rel="noreferrer" className="px-6 py-3 rounded-md bg-transparent text-slate-600 hover:text-slate-900 transition-colors flex items-center gap-2">
+          <a href="https://github.com/bott-127001" target="_blank" rel="noreferrer" className="px-6 py-3 rounded-md bg-transparent text-slate-600 hover:text-slate-900 transition-colors flex items-center gap-2">
             <GithubIcon size={16} /> GitHub Profile
-          </a>
-          <a href="https://leetcode.com/u/prajwalnangare01/" target="_blank" rel="noreferrer" className="px-6 py-3 rounded-md bg-transparent text-slate-600 hover:text-slate-900 transition-colors flex items-center gap-2">
-            <LeetcodeIcon size={16} /> LeetCode
           </a>
         </motion.div>
       </motion.div>
@@ -587,7 +584,7 @@ const Projects = () => {
           className="mt-12 flex justify-start"
         >
           <a
-            href="https://github.com/prajwalnangare01"
+            href="https://github.com/bott-127001"
             target="_blank"
             rel="noreferrer"
             className="inline-flex items-center gap-2 px-6 py-3 bg-white border border-slate-200 text-slate-700 text-sm font-medium rounded-md hover:bg-slate-50 hover:text-slate-900 transition-colors shadow-sm"
@@ -670,7 +667,7 @@ const Experience = () => {
     },
     {
       role: "Frontend Implementation Intern",
-      company: "Parplaero",
+      company: "Jetking",
       date: "Feb 2026 - Aug 2026",
       points: [
         "Implemented responsive frontend interfaces from Figma designs using modern web technologies.",
@@ -745,9 +742,9 @@ const Experience = () => {
             >
               <div className="w-full md:w-1/4 shrink-0 text-slate-500 text-sm font-medium pt-1">2024 – 2027</div>
               <div className="w-full md:w-3/4">
-                <h4 className="text-lg font-bold text-slate-900">BSc Computer Science</h4>
-                <div className="text-slate-600 mb-1">ASM College, Pimpri</div>
-                <div className="text-sm text-slate-500">CGPA: 8.5</div>
+                <h4 className="text-lg font-bold text-slate-900">BE Computer Engineering</h4>
+                <div className="text-slate-600 mb-1">JSPM JSCOE Hadapsar</div>
+                <div className="text-sm text-slate-500">CGPA: 8.33</div>
               </div>
             </motion.div>
             <motion.div 
@@ -760,7 +757,7 @@ const Experience = () => {
               <div className="w-full md:w-3/4">
                 <h4 className="text-lg font-bold text-slate-900">Diploma in Information Technology</h4>
                 <div className="text-slate-600 mb-1">AISSMS Polytechnic, Pune</div>
-                <div className="text-sm text-slate-500">77.00%</div>
+                <div className="text-sm text-slate-500">83.56%</div>
               </div>
             </motion.div>
           </div>
@@ -775,24 +772,18 @@ const Footer = () => (
   <footer className="py-10 border-t border-slate-200 bg-slate-50">
     <div className="max-w-6xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-6 text-center md:text-left">
       <div className="text-slate-500 text-sm font-medium order-2 md:order-1 mt-4 md:mt-0">
-        © {new Date().getFullYear()} Prajwal Nangare. All rights reserved.
+        © {new Date().getFullYear()} Samarth Salgar. All rights reserved.
       </div>
 
       <div className="flex items-center gap-6 text-slate-600 order-1 md:order-2">
-        <a href="mailto:prajwalnangare41@gmail.com" className="w-10 h-10 rounded-full bg-white border border-slate-200 flex items-center justify-center hover:bg-slate-900 hover:text-white transition-colors" title="Email">
+        <a href="mailto:samarthsalgar02@gmail.com" className="w-10 h-10 rounded-full bg-white border border-slate-200 flex items-center justify-center hover:bg-slate-900 hover:text-white transition-colors" title="Email">
           <Mail size={18} />
         </a>
-        <a href="tel:+919579158374" className="w-10 h-10 rounded-full bg-white border border-slate-200 flex items-center justify-center hover:bg-slate-900 hover:text-white transition-colors" title="Phone">
+        <a href="tel:+917385507049" className="w-10 h-10 rounded-full bg-white border border-slate-200 flex items-center justify-center hover:bg-slate-900 hover:text-white transition-colors" title="Phone">
           <Phone size={18} />
         </a>
-        <a href="https://www.linkedin.com/in/prajwal-nangare-5988042b2/" target="_blank" rel="noreferrer" className="w-10 h-10 rounded-full bg-white border border-slate-200 flex items-center justify-center hover:bg-slate-900 hover:text-white transition-colors" title="LinkedIn">
-          <LinkedinIcon size={18} />
-        </a>
-        <a href="https://github.com/prajwalnangare01" target="_blank" rel="noreferrer" className="w-10 h-10 rounded-full bg-white border border-slate-200 flex items-center justify-center hover:bg-slate-900 hover:text-white transition-colors" title="GitHub">
+        <a href="https://github.com/bott-127001" target="_blank" rel="noreferrer" className="w-10 h-10 rounded-full bg-white border border-slate-200 flex items-center justify-center hover:bg-slate-900 hover:text-white transition-colors" title="GitHub">
           <GithubIcon size={18} />
-        </a>
-        <a href="https://leetcode.com/u/prajwalnangare01/" target="_blank" rel="noreferrer" className="w-10 h-10 rounded-full bg-white border border-slate-200 flex items-center justify-center hover:bg-slate-900 hover:text-white transition-colors" title="LeetCode">
-          <LeetcodeIcon size={18} />
         </a>
       </div>
     </div>

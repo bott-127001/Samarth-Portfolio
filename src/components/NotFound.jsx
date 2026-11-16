@@ -46,7 +46,7 @@ export const NotFound = ({ onNavigateHome }) => {
             }}
             className="font-bold text-lg tracking-tight text-slate-900 hover:text-slate-700 transition-colors"
           >
-            Prajwal Nangare.
+            Samarth Salgar.
           </a>
           <a
             href="/"
@@ -87,7 +87,7 @@ export const NotFound = ({ onNavigateHome }) => {
                 <span className="w-3 h-3 rounded-full bg-green-500/80 inline-block" />
               </div>
               <span className="text-xs font-mono text-slate-400 flex items-center gap-1.5">
-                <Terminal size={13} className="text-slate-400" /> prajwal-portfolio ~ bash
+                <Terminal size={13} className="text-slate-400" /> samarth-portfolio ~ bash
               </span>
               <div className="w-12" /> {/* Spacer */}
             </div>
@@ -144,7 +144,7 @@ export const NotFound = ({ onNavigateHome }) => {
               <ArrowLeft size={18} /> Back to Portfolio
             </button>
             <a
-              href="mailto:prajwalnangare41@gmail.com"
+              href="mailto:samarthsalgar02@gmail.com"
               className="inline-flex items-center gap-2 px-6 py-3 bg-white text-slate-800 font-medium rounded-lg border border-slate-200 hover:bg-slate-100 hover:border-slate-300 transition-all shadow-sm transform active:scale-95"
             >
               <Mail size={18} /> Report Broken Link
@@ -224,7 +224,7 @@ export const NotFound = ({ onNavigateHome }) => {
       {/* Footer */}
       <footer className="relative z-10 border-t border-slate-200 bg-white/60 backdrop-blur-sm py-6">
         <div className="max-w-6xl mx-auto px-6 text-center text-xs text-slate-500">
-          © {currentYear} Prajwal Nangare. All rights reserved.
+          © {currentYear} Samarth Salgar. All rights reserved.
         </div>
       </footer>
     </div>
