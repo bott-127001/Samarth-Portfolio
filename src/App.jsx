@@ -295,7 +295,7 @@ const CodivaSection = () => {
 
 const Skills = () => {
   const categories = [
-    { title: "Frontend", skills: ["React 18", "Next.js 14", "TypeScript", "JavaScript (ES6+)", "Tailwind CSS", "HTML5", "CSS3", "MUI", "Chart.js"] },
+    { title: "Frontend", skills: ["React", "Next.js", "TypeScript", "JavaScript", "Tailwind CSS", "HTML5", "CSS3", "MUI"] },
     { title: "Backend", skills: ["Node.js", "Express.js", "PostgreSQL", "Supabase", "MongoDB", "MySQL", "Redis", "SQLite", "REST APIs"] },
     { title: "AI / ML", skills: ["Python", "MediaPipe", "WebRTC", "Groq API", "Google Gemini API", "PyTorch", "TensorFlow", "Scikit-learn", "NumPy", "Pandas", "n8n", "Meta Graph API"] },
     { title: "DevOps & Tools", skills: ["GitHub Actions", "Docker", "Kubernetes", "CI/CD", "Razorpay API", "Git", "GitHub", "Vercel", "Render"] }
@@ -387,7 +387,7 @@ const Projects = () => {
       title: "TurfFlow — Multi-Sport Arena SaaS & WhatsApp Booking Engine",
       subtitle: "Omnichannel Sports Arena Management & Automated Reservation Engine",
       description: "Launched under Codiva Labs for sports arena and box cricket turf operators to completely automate customer reservations, payments, and daily facility operations without manual staff or phone calls. Enables players to check availability and book instantly via web or conversational WhatsApp (English/Hinglish). Solves double-booking race conditions through 5-minute Redis distributed slot locks, automates Razorpay payments with webhook idempotency and late-capture auto-refunds, generates 4-digit QR Gate Passes, and automates dynamic pricing, rainout cancellations, and monthly owner financial ledgers.",
-      tags: ["React 18", "TypeScript", "Node.js", "Express", "PostgreSQL", "Supabase", "Redis", "Razorpay", "Baileys + n8n"],
+      tags: ["React", "TypeScript", "Node.js", "Express", "PostgreSQL", "Supabase", "Redis", "Razorpay", "Baileys + n8n"],
       highlight: "🚀 Codiva Venture · Flagship B2B SaaS",
       github: null,
       demo: "https://turfflow-codiva.vercel.app/",
@@ -399,7 +399,7 @@ const Projects = () => {
       title: "RVOLX — Institutional Intraday Quantitative Signals Platform",
       subtitle: "Quantitative Trading Signals Engine & Ultra-Low-Latency Delivery",
       description: "Launched under Codiva Labs as a quantitative trading signals SaaS for NSE NIFTY 200 cash equities firing at 09:30 AM IST using Relative Volume (RVOL >= 2.5x), 14-period ATR volatility corridors, and strict >=1:2 Risk-to-Reward filters. Engineered an air-gapped HMAC-SHA256 signal ingestion bridge (<15ms latency), 3-tier RBAC across 4 web portals, and sub-450ms consent-verified WhatsApp alert delivery.",
-      tags: ["Next.js 14", "TypeScript", "PostgreSQL 18", "HMAC-SHA256", "Baileys WhatsApp", "Razorpay"],
+      tags: ["Next.js", "TypeScript", "PostgreSQL", "HMAC-SHA256", "Baileys WhatsApp", "Razorpay"],
       highlight: "📈 Codiva Venture · FinTech SaaS",
       github: null,
       demo: "https://rvolx.netlify.app/",
@@ -411,7 +411,7 @@ const Projects = () => {
       title: "Prosperia — AI Real Estate Lead & Revenue Recovery SaaS",
       subtitle: "AI PropTech Lead Qualification, Calendar Scheduler & Pipeline CRM",
       description: "Launched under Codiva Labs as an autonomous customer acquisition and pipeline revenue recovery SaaS engineered for real estate agencies and developers. Features omnichannel conversational lead capture and qualification via Groq Llama 3.3 and Gemini tool contracts, semantic property inventory matching using pgvector, automated site visit booking with two-way calendar sync, and dormant CRM lead re-activation campaigns.",
-      tags: ["React 18", "Node.js", "Express", "PostgreSQL", "Supabase RLS", "pgvector", "Groq AI", "Meta APIs"],
+      tags: ["React", "Node.js", "Express", "PostgreSQL", "Supabase RLS", "pgvector", "Groq AI", "Meta APIs"],
       highlight: "🏢 Codiva Venture · PropTech AI SaaS",
       github: "https://github.com/bott-127001/Prosperia",
       demo: "https://real-estate-iota-six-59.vercel.app/"
