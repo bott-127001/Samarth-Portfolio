@@ -363,7 +363,7 @@ const Projects = () => {
       tags: ["Node.js", "Express.js", "JavaScript", "Google Gemini AI"],
       highlight: "🏆 Hackathon Runner-Up",
       github: "https://github.com/prajwalnangare01/HemaLens",
-      demo: null
+      demo: "https://hemalens-nu.vercel.app/"
     },
     {
       title: "Prosperia — AI Real Estate Lead & Revenue Recovery SaaS",
