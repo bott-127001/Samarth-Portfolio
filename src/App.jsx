@@ -666,15 +666,6 @@ const Experience = () => {
       ]
     },
     {
-      role: "Frontend Implementation Intern",
-      company: "Jetking",
-      date: "Feb 2026 - Aug 2026",
-      points: [
-        "Implemented responsive frontend interfaces from Figma designs using modern web technologies.",
-        "Developed reusable UI components and improved responsiveness and user experience across web applications."
-      ]
-    },
-    {
       role: "Web Development Intern",
       company: "DThrill Software Solutions",
       date: "Jun 2023 - Jul 2023",
