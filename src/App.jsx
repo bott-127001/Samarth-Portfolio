@@ -180,7 +180,7 @@ const Hero = () => (
         <TypewriterHeading />
 
         <motion.p variants={fadeIn} className="text-lg text-slate-600 leading-relaxed max-w-2xl mb-10">
-          A Computer Science student and Full-Stack Engineer based in Pune, India. I architect production-grade web applications, vertical SaaS platforms, and autonomous AI workflows—from concurrency-safe booking engines to zero-cost serverless publishing pipelines. Founder of Codiva Labs, launching proprietary SaaS products and specialized services including TurfFlow, RVOLX, Aladin, and Prosperia.
+          A Full-Stack Engineer based in Pune, India. I architect production-grade web applications, vertical SaaS platforms, and autonomous AI workflows—from concurrency-safe booking engines to zero-cost serverless publishing pipelines. Founder of Codiva Labs, delivering full-stack development, custom SaaS engineering, and AI automation services.
         </motion.p>
 
         <motion.div variants={fadeIn} className="flex flex-wrap gap-4 text-sm font-medium">
@@ -221,7 +221,8 @@ const CodivaSection = () => {
           viewport={{ once: true }}
           className="bg-slate-800/50 rounded-2xl p-8 md:p-12 border border-slate-700/50 hover:border-slate-600 transition-colors shadow-2xl"
         >
-          <div className="flex flex-col md:flex-row gap-8 items-start">
+          {/* Header Row */}
+          <div className="flex flex-col md:flex-row gap-8 items-start mb-8 pb-8 border-b border-slate-700/60">
             <div className="w-full md:w-1/3 shrink-0">
               <h3 className="text-3xl font-extrabold text-white mb-2">Codiva.</h3>
               <p className="text-slate-400 font-medium mb-6">Founder & Full-Stack Lead</p>
@@ -235,39 +236,140 @@ const CodivaSection = () => {
               </div>
             </div>
             <div className="w-full md:w-2/3">
-              <p className="text-slate-300 leading-relaxed text-lg mb-6">
-                Founded a software and digital product studio delivering production-grade web platforms, vertical SaaS solutions, and AI automation pipelines. Under Codiva, we build and launch proprietary ventures—including TurfFlow, RVOLX, Aladin, and Prosperia—alongside live commercial client websites and interactive showcases, supported by an autonomous $0/month serverless content engine running daily on @codiva_labs.
+              <p className="text-slate-300 leading-relaxed text-lg">
+                Founded a software and digital product studio delivering production-grade web platforms, vertical SaaS solutions, and AI automation pipelines. Under Codiva, we architect, launch, and operate specialized products and services alongside delivering high-converting client platforms.
               </p>
-              <div className="pt-4 border-t border-slate-700/60 flex flex-col gap-3 text-sm text-slate-400">
-                <div className="flex flex-wrap items-center gap-x-2 gap-y-1">
-                  <span className="text-slate-300 font-medium">Services & Products:</span>
-                  <span className="text-slate-300">TurfFlow</span>
-                  <span className="text-slate-600">•</span>
-                  <span className="text-slate-300">RVOLX</span>
-                  <span className="text-slate-600">•</span>
-                  <span className="text-slate-300">Aladin <span className="text-[11px] text-amber-400 font-medium">(Coming Soon)</span></span>
-                  <span className="text-slate-600">•</span>
-                  <span className="text-slate-300">Prosperia</span>
-                </div>
-                <div className="flex flex-wrap items-center gap-x-2 gap-y-1">
-                  <span className="text-slate-300 font-medium">Interactive Portfolio:</span>
+              <div className="mt-6 flex flex-wrap gap-x-6 gap-y-2 text-sm text-slate-400">
+                <div className="flex items-center gap-2">
+                  <span className="text-slate-300 font-medium">Interactive Showcase:</span>
                   <a href="https://codivalabs.com/portfolio" target="_blank" rel="noreferrer" className="text-blue-400 hover:text-blue-300 transition-colors inline-flex items-center gap-1 font-medium">
                     12 Live Demos <ExternalLink size={13} />
                   </a>
                 </div>
-                <div className="flex flex-wrap items-center gap-x-3 gap-y-1">
+                <div className="flex items-center gap-2">
                   <span className="text-slate-300 font-medium">Live Client Sites:</span>
-                  <a href="https://www.powerupfitness.co.in/" target="_blank" rel="noreferrer" className="hover:text-slate-200 underline decoration-slate-600 underline-offset-2 transition-colors">
-                    Power Up Fitness
-                  </a>
+                  <a href="https://www.powerupfitness.co.in/" target="_blank" rel="noreferrer" className="hover:text-slate-200 underline decoration-slate-600 underline-offset-2 transition-colors">Power Up Fitness</a>
                   <span className="text-slate-600">•</span>
-                  <a href="https://artistabysupriya.com/" target="_blank" rel="noreferrer" className="hover:text-slate-200 underline decoration-slate-600 underline-offset-2 transition-colors">
-                    Artista Salon
-                  </a>
+                  <a href="https://artistabysupriya.com/" target="_blank" rel="noreferrer" className="hover:text-slate-200 underline decoration-slate-600 underline-offset-2 transition-colors">Artista Salon</a>
                   <span className="text-slate-600">•</span>
-                  <a href="https://theadsarchitect.netlify.app/" target="_blank" rel="noreferrer" className="hover:text-slate-200 underline decoration-slate-600 underline-offset-2 transition-colors">
-                    The Ads Architects
+                  <a href="https://theadsarchitect.netlify.app/" target="_blank" rel="noreferrer" className="hover:text-slate-200 underline decoration-slate-600 underline-offset-2 transition-colors">The Ads Architects</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Services & Products Grid */}
+          <div>
+            <h4 className="text-xs font-bold uppercase tracking-widest text-slate-400 mb-5">
+              Services & Products
+            </h4>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              {/* TurfFlow */}
+              <div className="p-5 rounded-xl bg-slate-900/60 border border-slate-700/50 hover:border-slate-600 transition-colors flex flex-col justify-between">
+                <div>
+                  <div className="flex items-center justify-between gap-2 mb-2">
+                    <div className="flex items-center gap-2 flex-wrap">
+                      <h5 className="text-white font-bold text-base">TurfFlow</h5>
+                      <span className="text-[11px] font-semibold px-2 py-0.5 rounded bg-blue-500/20 text-blue-300 border border-blue-500/30">
+                        Sports Arena SaaS
+                      </span>
+                    </div>
+                    <a href="https://turfflow-codiva.vercel.app/" target="_blank" rel="noreferrer" className="text-slate-400 hover:text-white transition-colors p-1" title="View Live Demo">
+                      <ExternalLink size={14} />
+                    </a>
+                  </div>
+                  <p className="text-slate-300 text-sm leading-relaxed mb-3">
+                    Omnichannel sports arena & box cricket booking SaaS with automated WhatsApp reservations, 5-minute Redis slot locking, and Razorpay auto-refunds.
+                  </p>
+                </div>
+                <div className="flex items-center gap-3 pt-2 text-xs text-slate-400 border-t border-slate-800">
+                  <a href="https://turfflow-codiva.vercel.app/" target="_blank" rel="noreferrer" className="text-blue-400 hover:text-blue-300 font-medium inline-flex items-center gap-1">
+                    Live Demo <ExternalLink size={12} />
                   </a>
+                  <span className="text-slate-700">•</span>
+                  <a href="https://instagram.com/turf_flow" target="_blank" rel="noreferrer" className="text-slate-400 hover:text-slate-200 inline-flex items-center gap-1">
+                    @turf_flow
+                  </a>
+                </div>
+              </div>
+
+              {/* RVOLX */}
+              <div className="p-5 rounded-xl bg-slate-900/60 border border-slate-700/50 hover:border-slate-600 transition-colors flex flex-col justify-between">
+                <div>
+                  <div className="flex items-center justify-between gap-2 mb-2">
+                    <div className="flex items-center gap-2 flex-wrap">
+                      <h5 className="text-white font-bold text-base">RVOLX</h5>
+                      <span className="text-[11px] font-semibold px-2 py-0.5 rounded bg-emerald-500/20 text-emerald-300 border border-emerald-500/30">
+                        FinTech Signals SaaS
+                      </span>
+                    </div>
+                    <a href="https://rvolx.netlify.app/" target="_blank" rel="noreferrer" className="text-slate-400 hover:text-white transition-colors p-1" title="View Live Demo">
+                      <ExternalLink size={14} />
+                    </a>
+                  </div>
+                  <p className="text-slate-300 text-sm leading-relaxed mb-3">
+                    Quantitative intraday trading signals platform for NSE NIFTY 200 cash equities with HMAC-SHA256 signal ingestion bridge and sub-450ms WhatsApp alert delivery.
+                  </p>
+                </div>
+                <div className="flex items-center gap-3 pt-2 text-xs text-slate-400 border-t border-slate-800">
+                  <a href="https://rvolx.netlify.app/" target="_blank" rel="noreferrer" className="text-emerald-400 hover:text-emerald-300 font-medium inline-flex items-center gap-1">
+                    Live Demo <ExternalLink size={12} />
+                  </a>
+                  <span className="text-slate-700">•</span>
+                  <a href="https://instagram.com/rvol_x" target="_blank" rel="noreferrer" className="text-slate-400 hover:text-slate-200 inline-flex items-center gap-1">
+                    @rvol_x
+                  </a>
+                </div>
+              </div>
+
+              {/* Prosperia */}
+              <div className="p-5 rounded-xl bg-slate-900/60 border border-slate-700/50 hover:border-slate-600 transition-colors flex flex-col justify-between">
+                <div>
+                  <div className="flex items-center justify-between gap-2 mb-2">
+                    <div className="flex items-center gap-2 flex-wrap">
+                      <h5 className="text-white font-bold text-base">Prosperia</h5>
+                      <span className="text-[11px] font-semibold px-2 py-0.5 rounded bg-purple-500/20 text-purple-300 border border-purple-500/30">
+                        PropTech AI SaaS
+                      </span>
+                    </div>
+                    <a href="https://real-estate-iota-six-59.vercel.app/" target="_blank" rel="noreferrer" className="text-slate-400 hover:text-white transition-colors p-1" title="View Live Demo">
+                      <ExternalLink size={14} />
+                    </a>
+                  </div>
+                  <p className="text-slate-300 text-sm leading-relaxed mb-3">
+                    AI-powered real estate lead qualification, site visit scheduling, and pipeline CRM engineered to stop lead drop-offs and recover missed sales revenue.
+                  </p>
+                </div>
+                <div className="flex items-center gap-3 pt-2 text-xs text-slate-400 border-t border-slate-800">
+                  <a href="https://real-estate-iota-six-59.vercel.app/" target="_blank" rel="noreferrer" className="text-purple-400 hover:text-purple-300 font-medium inline-flex items-center gap-1">
+                    Live Demo <ExternalLink size={12} />
+                  </a>
+                  <span className="text-slate-700">•</span>
+                  <a href="https://github.com/bott-127001/Prosperia" target="_blank" rel="noreferrer" className="text-slate-400 hover:text-slate-200 inline-flex items-center gap-1">
+                    GitHub Code
+                  </a>
+                </div>
+              </div>
+
+              {/* Aladin */}
+              <div className="p-5 rounded-xl bg-slate-900/60 border border-slate-700/50 hover:border-slate-600 transition-colors flex flex-col justify-between">
+                <div>
+                  <div className="flex items-center justify-between gap-2 mb-2">
+                    <div className="flex items-center gap-2 flex-wrap">
+                      <h5 className="text-white font-bold text-base">Aladin</h5>
+                      <span className="text-[11px] font-semibold px-2 py-0.5 rounded bg-amber-500/20 text-amber-300 border border-amber-500/30 flex items-center gap-1">
+                        <span className="w-1.5 h-1.5 rounded-full bg-amber-400 animate-pulse" /> Coming Soon
+                      </span>
+                    </div>
+                  </div>
+                  <p className="text-slate-300 text-sm leading-relaxed mb-3">
+                    Institutional SMC-based Forex technical analysis engine for XAUUSD (Gold) spot price action, detecting CHOCH structural trend reversals and liquidity sweeps.
+                  </p>
+                </div>
+                <div className="flex items-center gap-3 pt-2 text-xs text-slate-400 border-t border-slate-800">
+                  <span className="text-amber-400 font-medium inline-flex items-center gap-1">
+                    In Active Development
+                  </span>
                 </div>
               </div>
             </div>
@@ -327,8 +429,34 @@ const Skills = () => {
 };
 
 const Projects = () => {
+  const [activeCategory, setActiveCategory] = useState("all");
+
   const projects = [
     {
+      id: "ai-gym-coach",
+      category: "hand-coded",
+      title: "AI Gym Coach — Real-Time Computer Vision & Voice Fitness Assistant",
+      subtitle: "Hand-Coded Skeletal Kinematics & Real-Time Rep-Counting Engine",
+      description: "Hand-coded completely from scratch without AI assistance to master core Python, MediaPipe Pose Landmarker, and WebRTC streaming. Calculates joint trigonometry angles in real time to monitor valid repetitions and posture across 5 exercises (squats, push-ups, curls, shoulder press, lunges), provides spoken corrective audio feedback via Groq (Llama 3.3) and gTTS, and logs workout histories in SQLite.",
+      tags: ["Python", "MediaPipe", "WebRTC", "Trigonometry / Geometry", "Streamlit", "SQLite", "Groq (Llama 3.3)"],
+      highlight: "💻 100% Hand-Coded (Zero AI)",
+      github: "https://github.com/prajwalnangare01/AI-Gym-Coach",
+      demo: "https://ai-gym-coach-ktsskhrh7kk6vc9uxjpkum.streamlit.app/"
+    },
+    {
+      id: "weather-app",
+      category: "hand-coded",
+      title: "Weather App — Real-Time Geolocation & Forecast Application",
+      subtitle: "Hand-Coded Asynchronous JavaScript & REST API Weather Engine",
+      description: "Hand-coded 100% from scratch without AI to master foundational vanilla JavaScript, asynchronous DOM manipulation, and browser APIs. Features real-time atmospheric data fetching via WeatherAPI, automatic HTML5 Geolocation detection, dynamic gradient UI transitions, background weather videos, and a fully responsive layout built with pure CSS3 Flexbox.",
+      tags: ["JavaScript (Vanilla)", "HTML5", "CSS3 Flexbox", "WeatherAPI", "DOM Manipulation", "Async / Fetch API"],
+      highlight: "💻 100% Hand-Coded (Zero AI)",
+      github: "https://github.com/prajwalnangare01/WeatherApp",
+      demo: "https://weatherappprajwal.netlify.app/"
+    },
+    {
+      id: "turfflow",
+      category: "saas",
       title: "TurfFlow — Multi-Sport Arena SaaS & WhatsApp Booking Engine",
       subtitle: "Omnichannel Sports Arena Management & Automated Reservation Engine",
       description: "Launched under Codiva Labs for sports arena and box cricket turf operators to completely automate customer reservations, payments, and daily facility operations without manual staff or phone calls. Enables players to check availability and book instantly via web or conversational WhatsApp (English/Hinglish). Solves double-booking race conditions through 5-minute Redis distributed slot locks, automates Razorpay payments with webhook idempotency and late-capture auto-refunds, generates 4-digit QR Gate Passes, and automates dynamic pricing, rainout cancellations, and monthly owner financial ledgers.",
@@ -339,6 +467,8 @@ const Projects = () => {
       instagram: "https://instagram.com/turf_flow"
     },
     {
+      id: "rvolx",
+      category: "saas",
       title: "RVOLX — Institutional Intraday Quantitative Signals Platform",
       subtitle: "Quantitative Trading Signals Engine & Ultra-Low-Latency Delivery",
       description: "Launched under Codiva Labs as a quantitative trading signals SaaS for NSE NIFTY 200 cash equities firing at 09:30 AM IST using Relative Volume (RVOL >= 2.5x), 14-period ATR volatility corridors, and strict >=1:2 Risk-to-Reward filters. Engineered an air-gapped HMAC-SHA256 signal ingestion bridge (<15ms latency), 3-tier RBAC across 4 web portals, and sub-450ms consent-verified WhatsApp alert delivery.",
@@ -349,33 +479,8 @@ const Projects = () => {
       instagram: "https://instagram.com/rvol_x"
     },
     {
-      title: "Codiva Autonomous Media Engine — Serverless AI Content Pipeline",
-      subtitle: "Autonomous Cloud Publishing & Multi-Model Generation System",
-      description: "Built to completely automate brand growth, developer educational content, and social media marketing for Codiva Labs without manual graphic design or scheduling. Autonomously writes, designs, and publishes technical MERN stack carousels (2 posts daily) directly to Instagram (@codiva_labs) at $0.00/month infrastructure cost—powered by ephemeral GitHub Actions cron runners, a multi-model Gemini AI chain, Git-as-a-database state tracking, C++ SVG-to-PNG rasterization (<150ms renders), and Meta Graph API publishing.",
-      tags: ["Node.js", "GitHub Actions", "Google Gemini API", "@resvg/resvg-js", "Meta Graph API v23.0"],
-      highlight: "⚡ $0/mo Serverless System",
-      github: "https://github.com/prajwalnangare01/codiva_automation",
-      demo: "https://instagram.com/codiva_labs"
-    },
-    {
-      title: "AI Gym Coach — Real-Time Computer Vision & Voice Fitness Assistant",
-      subtitle: "Real-Time Skeletal Form Corrector & Rep Counting Engine",
-      description: "Built for automated personal fitness training and injury prevention without requiring an expensive gym trainer. Uses live webcam video via MediaPipe Pose Landmarker and WebRTC to monitor skeletal joint angles in real time, automatically count valid reps, and diagnose improper posture across 5 exercises (squats, push-ups, curls, shoulder press, lunges). Delivers instant spoken corrective audio coaching through Groq (Llama 3.3) and gTTS, while logging workout sessions in SQLite.",
-      tags: ["Python", "MediaPipe", "WebRTC", "Groq (Llama 3.3)", "gTTS", "Streamlit", "SQLite"],
-      highlight: "🏋️ Computer Vision & LLM",
-      github: "https://github.com/prajwalnangare01/AI-Gym-Coach",
-      demo: "https://ai-gym-coach-ktsskhrh7kk6vc9uxjpkum.streamlit.app/"
-    },
-    {
-      title: "HemaLens — AI Blood Report Analyzer",
-      subtitle: "AI Medical Diagnostic & Biomarker Analysis Tool",
-      description: "Built to make complex medical blood test reports easily understandable for patients without waiting for clinical consultations. Analyzes uploaded pathology report images to extract critical hematology biomarkers (CBC, hemoglobin, platelets, lipid profiles), detect out-of-range anomalies, and translate dense medical jargon into clear, simplified health summaries in English and Hindi—complete with personalized dietary and lifestyle recommendations powered by Google Gemini AI.",
-      tags: ["Node.js", "Express.js", "JavaScript", "Google Gemini AI"],
-      highlight: "🏆 Hackathon Runner-Up",
-      github: "https://github.com/prajwalnangare01/HemaLens",
-      demo: "https://hemalens-nu.vercel.app/"
-    },
-    {
+      id: "prosperia",
+      category: "saas",
       title: "Prosperia — AI Real Estate Lead & Revenue Recovery SaaS",
       subtitle: "AI PropTech Lead Qualification, Calendar Scheduler & Pipeline CRM",
       description: "Launched under Codiva Labs as an autonomous customer acquisition and pipeline revenue recovery SaaS engineered for real estate agencies and developers. Features omnichannel conversational lead capture and qualification via Groq Llama 3.3 and Gemini tool contracts, semantic property inventory matching using pgvector, automated site visit booking with two-way calendar sync, and dormant CRM lead re-activation campaigns.",
@@ -385,6 +490,30 @@ const Projects = () => {
       demo: "https://real-estate-iota-six-59.vercel.app/"
     },
     {
+      id: "codiva-media",
+      category: "saas",
+      title: "Codiva Autonomous Media Engine — Serverless AI Content Pipeline",
+      subtitle: "Autonomous Cloud Publishing & Multi-Model Generation System",
+      description: "Built to completely automate brand growth, developer educational content, and social media marketing for Codiva Labs without manual graphic design or scheduling. Autonomously writes, designs, and publishes technical MERN stack carousels (2 posts daily) directly to Instagram (@codiva_labs) at $0.00/month infrastructure cost—powered by ephemeral GitHub Actions cron runners, a multi-model Gemini AI chain, Git-as-a-database state tracking, C++ SVG-to-PNG rasterization (<150ms renders), and Meta Graph API publishing.",
+      tags: ["Node.js", "GitHub Actions", "Google Gemini API", "@resvg/resvg-js", "Meta Graph API v23.0"],
+      highlight: "⚡ $0/mo Serverless System",
+      github: "https://github.com/prajwalnangare01/codiva_automation",
+      demo: "https://instagram.com/codiva_labs"
+    },
+    {
+      id: "hemalens",
+      category: "saas",
+      title: "HemaLens — AI Blood Report Analyzer",
+      subtitle: "AI Medical Diagnostic & Biomarker Analysis Tool",
+      description: "Built to make complex medical blood test reports easily understandable for patients without waiting for clinical consultations. Analyzes uploaded pathology report images to extract critical hematology biomarkers (CBC, hemoglobin, platelets, lipid profiles), detect out-of-range anomalies, and translate dense medical jargon into clear, simplified health summaries in English and Hindi—complete with personalized dietary and lifestyle recommendations powered by Google Gemini AI.",
+      tags: ["Node.js", "Express.js", "JavaScript", "Google Gemini AI"],
+      highlight: "🏆 Hackathon Runner-Up",
+      github: "https://github.com/prajwalnangare01/HemaLens",
+      demo: "https://hemalens-nu.vercel.app/"
+    },
+    {
+      id: "aladin",
+      category: "saas",
       title: "Aladin — SMC-Based XAUUSD Forex Technical Indicator",
       subtitle: "Smart Money Concepts (SMC) Institutional Gold Market Structure Engine",
       description: "Built for quantitative and algorithmic Forex traders to identify high-probability institutional setups on XAUUSD (Gold / US Dollar). In active development under Codiva Labs, the engine formulates automated Change of Character (CHOCH) structural trend reversals, detects resting Trendline Liquidity (TJL) retail stop clusters, and confirms high-probability mitigation entries using multi-timeframe Order Blocks and 3-candle Fair Value Gaps (FVG).",
@@ -396,33 +525,87 @@ const Projects = () => {
     }
   ];
 
+  const filteredProjects = activeCategory === "all"
+    ? projects
+    : projects.filter((p) => p.category === activeCategory);
+
+  const handCodedCount = projects.filter((p) => p.category === "hand-coded").length;
+  const saasCount = projects.filter((p) => p.category === "saas").length;
+
   return (
     <section id="projects" className="py-24 bg-slate-50">
       <div className="max-w-4xl mx-auto px-6">
-        <motion.h2 
-          initial={{ opacity: 0, x: -20 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5 }}
-          className="text-xl font-bold text-slate-900 mb-10 tracking-tight uppercase text-sm tracking-widest text-slate-400"
-        >
-          Selected Projects
-        </motion.h2>
+        <div className="flex flex-col md:flex-row md:items-end justify-between mb-8 gap-4">
+          <div>
+            <motion.h2 
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5 }}
+              className="text-xl font-bold text-slate-900 tracking-tight uppercase text-sm tracking-widest text-slate-400"
+            >
+              Selected Projects
+            </motion.h2>
+            <p className="text-slate-500 text-sm mt-2 max-w-xl">
+              Showcasing both <strong className="text-slate-800 font-semibold">100% hand-coded fundamentals</strong> (pure code without AI to master algorithms, DOM APIs, and computer vision geometry) and <strong className="text-slate-800 font-semibold">scaled SaaS & AI architectures</strong>.
+            </p>
+          </div>
+        </div>
+
+        {/* Category Filters */}
+        <div className="flex flex-wrap items-center gap-2 mb-10">
+          <button
+            onClick={() => setActiveCategory("all")}
+            className={`px-4 py-2 rounded-lg text-xs font-semibold transition-all ${
+              activeCategory === "all"
+                ? "bg-slate-900 text-white shadow-sm"
+                : "bg-white border border-slate-200 text-slate-600 hover:text-slate-900 hover:border-slate-300"
+            }`}
+          >
+            All Projects ({projects.length})
+          </button>
+          <button
+            onClick={() => setActiveCategory("hand-coded")}
+            className={`px-4 py-2 rounded-lg text-xs font-semibold transition-all flex items-center gap-1.5 ${
+              activeCategory === "hand-coded"
+                ? "bg-emerald-700 text-white shadow-sm"
+                : "bg-white border border-emerald-300/80 text-emerald-800 hover:bg-emerald-50"
+            }`}
+          >
+            <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" />
+            100% Hand-Coded (Zero AI) ({handCodedCount})
+          </button>
+          <button
+            onClick={() => setActiveCategory("saas")}
+            className={`px-4 py-2 rounded-lg text-xs font-semibold transition-all ${
+              activeCategory === "saas"
+                ? "bg-slate-900 text-white shadow-sm"
+                : "bg-white border border-slate-200 text-slate-600 hover:text-slate-900 hover:border-slate-300"
+            }`}
+          >
+            SaaS & AI Architectures ({saasCount})
+          </button>
+        </div>
 
         <div className="flex flex-col">
-          {projects.map((proj, idx) => (
+          {filteredProjects.map((proj, idx) => (
             <motion.div
-              key={idx}
+              key={proj.id || idx}
+              id={proj.id}
               initial={{ opacity: 0, y: 10 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="group py-12 border-b border-slate-200/60 last:border-0 flex flex-col md:flex-row gap-6 md:gap-12 items-start hover:bg-slate-100/30 transition-colors rounded-xl px-4 -mx-4 cursor-default"
+              className="group py-12 border-b border-slate-200/60 last:border-0 flex flex-col md:flex-row gap-6 md:gap-12 items-start hover:bg-slate-100/30 transition-colors rounded-xl px-4 -mx-4 cursor-default scroll-mt-24"
             >
               <div className="w-full md:w-1/3 shrink-0 group-hover:translate-x-2 transition-transform duration-300">
                 <h3 className="text-lg font-bold text-slate-900">{proj.title}</h3>
                 <p className="text-slate-500 text-sm mt-1 mb-4">{proj.subtitle}</p>
                 {proj.highlight && (
-                  <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-sm bg-slate-200/50 text-slate-700 text-xs font-semibold">
+                  <span className={`inline-flex items-center gap-1.5 px-2.5 py-1 rounded-sm text-xs font-semibold ${
+                    proj.category === "hand-coded"
+                      ? "bg-emerald-50 border border-emerald-200 text-emerald-800"
+                      : "bg-slate-200/50 text-slate-700"
+                  }`}>
                     {proj.highlight}
                   </span>
                 )}
@@ -494,23 +677,19 @@ const Experience = () => {
       date: "Jul 2025 – Present",
       points: [
         <>
-          <strong className="text-slate-900 font-semibold">What is Codiva:</strong> Founded a <strong className="text-slate-900 font-semibold">digital product agency</strong> that designs and builds custom business websites, self-serve booking systems, and automated software to help businesses look professional online, eliminate manual work, and generate more customers.
+          <strong className="text-slate-900 font-semibold">What is Codiva:</strong> Founded a <strong className="text-slate-900 font-semibold">digital product and software engineering agency</strong> delivering custom web platforms, scalable SaaS architectures, and autonomous AI automation systems for businesses and startups.
         </>,
         <>
-          <strong className="text-slate-900 font-semibold">What We Built & For Whom (Services):</strong>
+          <strong className="text-slate-900 font-semibold">Services & Platforms Built:</strong>
           <span className="block mt-1.5 space-y-1.5 pl-3 border-l-2 border-slate-200">
-            <span className="block">• <strong className="text-slate-900 font-semibold">For Fitness Chains & Gyms:</strong> Branded membership platforms and facility showcases designed to convert online visitors into walk-in members (e.g., Power Up Fitness).</span>
-            <span className="block">• <strong className="text-slate-900 font-semibold">For Salons & Wellness Studios:</strong> Online service catalogs and direct appointment booking so clients can schedule treatments 24/7 without phone calls (e.g., Artista Salon).</span>
-            <span className="block">• <strong className="text-slate-900 font-semibold">For Creative & Ad Agencies:</strong> High-conversion showcase websites crafted to win client trust and capture qualified business inquiries (e.g., The Ads Architects).</span>
-            <span className="block">• <strong className="text-slate-900 font-semibold">For Sports Arenas & Turfs:</strong> Self-serve web and WhatsApp slot reservation systems that automate availability, payments, and entry passes without front-desk staff.</span>
-            <span className="block">• <strong className="text-slate-900 font-semibold">For Real Estate Agencies:</strong> Automated customer qualification and property visit scheduling tools that stop lead drop-offs and follow up with buyers instantly.</span>
+            <span className="block">• <strong className="text-slate-900 font-semibold">TurfFlow:</strong> Sports arena & box cricket booking SaaS with automated WhatsApp reservations, 5-minute Redis slot locking, and Razorpay auto-refunds.</span>
+            <span className="block">• <strong className="text-slate-900 font-semibold">RVOLX:</strong> Quantitative intraday trading signals platform for NSE NIFTY 200 cash equities with HMAC-SHA256 signal ingestion bridge and sub-450ms WhatsApp alerts.</span>
+            <span className="block">• <strong className="text-slate-900 font-semibold">Prosperia:</strong> AI-powered real estate lead qualification, site visit scheduling, and pipeline CRM engineered to stop lead drop-offs and recover revenue.</span>
+            <span className="block">• <strong className="text-slate-900 font-semibold">Aladin <span className="text-xs text-amber-600 font-medium">(Coming Soon):</span></strong> Institutional SMC-based Forex technical analysis engine for XAUUSD (Gold) spot price action, detecting CHOCH reversals and liquidity pools.</span>
           </span>
         </>,
         <>
           <strong className="text-slate-900 font-semibold">Clients & Demos Delivered:</strong> Shipped <strong className="text-slate-900 font-semibold">3+ live commercial client platforms</strong> (<a href="https://www.powerupfitness.co.in/" target="_blank" rel="noreferrer" className="underline decoration-slate-400 hover:text-slate-900">Power Up Fitness</a>, <a href="https://artistabysupriya.com/" target="_blank" rel="noreferrer" className="underline decoration-slate-400 hover:text-slate-900">Artista Salon</a>, <a href="https://theadsarchitect.netlify.app/" target="_blank" rel="noreferrer" className="underline decoration-slate-400 hover:text-slate-900">The Ads Architects</a>) and created an interactive showcase of <strong className="text-slate-900 font-semibold">12+ live prototype demos</strong> across multiple industry verticals.
-        </>,
-        <>
-          <strong className="text-slate-900 font-semibold">In-House Products & Growth:</strong> Incubated <strong className="text-slate-900 font-semibold">4 proprietary products</strong> (<strong className="text-slate-900 font-semibold">TurfFlow</strong> for arena booking, <strong className="text-slate-900 font-semibold">RVOLX</strong> for stock market analysis, <strong className="text-slate-900 font-semibold">Aladin</strong> for gold price action, and <strong className="text-slate-900 font-semibold">Prosperia</strong> for real estate lead recovery), supported by an automated daily publishing channel (@codiva_labs).
         </>
       ]
     },
