@@ -400,7 +400,7 @@ const Projects = () => {
       subtitle: "Quantitative Trading Signals Platform & Automated Alert Engine",
       description: "An intraday quantitative trading platform engineered for active equity traders to remove emotional bias and decision fatigue at market open. It scans live market data to identify high-probability setups using volume and volatility algorithms, automatically delivering clear entry, target, and stop-loss levels directly to a web dashboard and instant WhatsApp alerts.",
       tags: ["Node.js", "Express", "React", "PostgreSQL", "Upstox API", "WhatsApp Worker", "Tailwind CSS"],
-      highlight: "✨ Quantitative Intraday SaaS",
+      highlight: "📈 Trading Intraday SaaS",
       github: null,
       demo: "https://rvolx.netlify.app/",
       instagram: "https://instagram.com/rvol_x"
