@@ -296,7 +296,7 @@ const CodivaSection = () => {
 const Skills = () => {
   const categories = [
     { title: "Frontend", skills: ["React", "Next.js", "TypeScript", "JavaScript", "Tailwind CSS", "HTML5", "CSS3", "MUI"] },
-    { title: "Backend", skills: ["Node.js", "Express.js", "PostgreSQL", "Supabase", "MongoDB", "MySQL", "REST APIs"] },
+    { title: "Backend", skills: ["Node.js", "Express.js", "PostgreSQL", "Supabase", "MongoDB", "MySQL", "Redis", "REST APIs"] },
     { title: "AI / ML", skills: ["Python", "MediaPipe", "WebRTC", "Groq API", "Google Gemini API", "PyTorch", "TensorFlow", "Scikit-learn", "NumPy", "Pandas", "n8n", "Meta Graph API"] },
     { title: "DevOps & Tools", skills: ["GitHub Actions", "Docker", "Kubernetes", "CI/CD", "Razorpay API", "Git", "GitHub", "Vercel", "Render"] }
   ];
