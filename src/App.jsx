@@ -119,7 +119,7 @@ const TypewriterHeading = () => {
     "Full-Stack Engineer",
     "SaaS & AI Builder",
     "GenAI & Automation Developer",
-    "Founder @ Codiva & TurfFlow"
+    "Founder @ Codiva Labs"
   ];
   const [currentPhraseIndex, setCurrentPhraseIndex] = useState(0);
   const [currentText, setCurrentText] = useState("");
@@ -180,7 +180,7 @@ const Hero = () => (
         <TypewriterHeading />
 
         <motion.p variants={fadeIn} className="text-lg text-slate-600 leading-relaxed max-w-2xl mb-10">
-          A Computer Science student and Full-Stack Engineer based in Pune, India. I architect production-grade web applications, vertical SaaS platforms, and autonomous AI workflows—from concurrency-safe booking engines to zero-cost serverless publishing pipelines. Founder of Codiva Labs and TurfFlow, and Co-Founder of RVOLX, building scalable software and live digital products.
+          A Computer Science student and Full-Stack Engineer based in Pune, India. I architect production-grade web applications, vertical SaaS platforms, and autonomous AI workflows—from concurrency-safe booking engines to zero-cost serverless publishing pipelines. Founder of Codiva Labs, launching proprietary SaaS products and specialized services including TurfFlow, RVOLX, Aladin, and Prosperia.
         </motion.p>
 
         <motion.div variants={fadeIn} className="flex flex-wrap gap-4 text-sm font-medium">
@@ -236,9 +236,19 @@ const CodivaSection = () => {
             </div>
             <div className="w-full md:w-2/3">
               <p className="text-slate-300 leading-relaxed text-lg mb-6">
-                Founded a software and web engineering studio delivering production-ready web platforms, custom booking systems, and AI automation pipelines for businesses. Shipped live commercial websites for multi-branch fitness brands, salons, and agencies alongside 12+ interactive industry showcases—backed by an autonomous $0/month serverless content engine running daily on @codiva_labs.
+                Founded a software and digital product studio delivering production-grade web platforms, vertical SaaS solutions, and AI automation pipelines. Under Codiva, we build and launch proprietary ventures—including TurfFlow, RVOLX, Aladin, and Prosperia—alongside live commercial client websites and interactive showcases, supported by an autonomous $0/month serverless content engine running daily on @codiva_labs.
               </p>
               <div className="pt-4 border-t border-slate-700/60 flex flex-col gap-3 text-sm text-slate-400">
+                <div className="flex flex-wrap items-center gap-x-2 gap-y-1">
+                  <span className="text-slate-300 font-medium">Services & Products:</span>
+                  <span className="text-slate-300">TurfFlow</span>
+                  <span className="text-slate-600">•</span>
+                  <span className="text-slate-300">RVOLX</span>
+                  <span className="text-slate-600">•</span>
+                  <span className="text-slate-300">Aladin</span>
+                  <span className="text-slate-600">•</span>
+                  <span className="text-slate-300">Prosperia</span>
+                </div>
                 <div className="flex flex-wrap items-center gap-x-2 gap-y-1">
                   <span className="text-slate-300 font-medium">Interactive Portfolio:</span>
                   <a href="https://codivalabs.com/portfolio" target="_blank" rel="noreferrer" className="text-blue-400 hover:text-blue-300 transition-colors inline-flex items-center gap-1 font-medium">
@@ -321,9 +331,9 @@ const Projects = () => {
     {
       title: "TurfFlow — Multi-Sport Arena SaaS & WhatsApp Booking Engine",
       subtitle: "Omnichannel Sports Arena Management & Automated Reservation Engine",
-      description: "Built for sports arena and box cricket turf operators to completely automate customer reservations, payments, and daily facility operations without manual staff or phone calls. Enables players to check availability and book instantly via web or conversational WhatsApp (English/Hinglish). Solves double-booking race conditions through 5-minute Redis distributed slot locks, automates Razorpay payments with webhook idempotency and late-capture auto-refunds, generates 4-digit QR Gate Passes, and automates dynamic pricing, rainout cancellations, and monthly owner financial ledgers.",
+      description: "Launched under Codiva Labs for sports arena and box cricket turf operators to completely automate customer reservations, payments, and daily facility operations without manual staff or phone calls. Enables players to check availability and book instantly via web or conversational WhatsApp (English/Hinglish). Solves double-booking race conditions through 5-minute Redis distributed slot locks, automates Razorpay payments with webhook idempotency and late-capture auto-refunds, generates 4-digit QR Gate Passes, and automates dynamic pricing, rainout cancellations, and monthly owner financial ledgers.",
       tags: ["React 18", "TypeScript", "Node.js", "Express", "PostgreSQL", "Supabase", "Redis", "Razorpay", "Baileys + n8n"],
-      highlight: "🚀 Founder · Flagship B2B SaaS",
+      highlight: "🚀 Codiva Venture · Flagship B2B SaaS",
       github: null,
       demo: "https://turfflow-codiva.vercel.app/",
       instagram: "https://instagram.com/turf_flow"
@@ -331,9 +341,9 @@ const Projects = () => {
     {
       title: "RVOLX — Institutional Intraday Quantitative Signals Platform",
       subtitle: "Quantitative Trading Signals Engine & Ultra-Low-Latency Delivery",
-      description: "Co-founded a multi-tenant quantitative trading signals SaaS for NSE NIFTY 200 cash equities firing at 09:30 AM IST using Relative Volume (RVOL >= 2.5x), 14-period ATR volatility corridors, and strict >=1:2 Risk-to-Reward filters. Engineered an air-gapped HMAC-SHA256 signal ingestion bridge (<15ms latency), 3-tier RBAC across 4 web portals, and sub-450ms consent-verified WhatsApp alert delivery.",
+      description: "Launched under Codiva Labs as a quantitative trading signals SaaS for NSE NIFTY 200 cash equities firing at 09:30 AM IST using Relative Volume (RVOL >= 2.5x), 14-period ATR volatility corridors, and strict >=1:2 Risk-to-Reward filters. Engineered an air-gapped HMAC-SHA256 signal ingestion bridge (<15ms latency), 3-tier RBAC across 4 web portals, and sub-450ms consent-verified WhatsApp alert delivery.",
       tags: ["Next.js 14", "TypeScript", "PostgreSQL 18", "HMAC-SHA256", "Baileys WhatsApp", "Razorpay"],
-      highlight: "📈 Co-Founder · FinTech SaaS",
+      highlight: "📈 Codiva Venture · FinTech SaaS",
       github: null,
       demo: "https://rvolx.netlify.app/",
       instagram: "https://instagram.com/rvol_x"
@@ -368,18 +378,18 @@ const Projects = () => {
     {
       title: "Prosperia — AI Real Estate Lead & Revenue Recovery SaaS",
       subtitle: "AI PropTech Lead Qualification, Calendar Scheduler & Pipeline CRM",
-      description: "Autonomous customer acquisition and pipeline revenue recovery SaaS engineered for real estate agencies and developers. Features omnichannel conversational lead capture and qualification via Groq Llama 3.3 and Gemini tool contracts, semantic property inventory matching using pgvector, automated site visit booking with two-way calendar sync, and dormant CRM lead re-activation campaigns.",
+      description: "Launched under Codiva Labs as an autonomous customer acquisition and pipeline revenue recovery SaaS engineered for real estate agencies and developers. Features omnichannel conversational lead capture and qualification via Groq Llama 3.3 and Gemini tool contracts, semantic property inventory matching using pgvector, automated site visit booking with two-way calendar sync, and dormant CRM lead re-activation campaigns.",
       tags: ["React 18", "Node.js", "Express", "PostgreSQL", "Supabase RLS", "pgvector", "Groq AI", "Meta APIs"],
-      highlight: "🏢 PropTech AI SaaS",
-      github: null,
-      demo: null
+      highlight: "🏢 Codiva Venture · PropTech AI SaaS",
+      github: "https://github.com/bott-127001/Prosperia",
+      demo: "https://real-estate-iota-six-59.vercel.app/"
     },
     {
       title: "Aladin — SMC-Based XAUUSD Forex Technical Indicator",
       subtitle: "Smart Money Concepts (SMC) Institutional Gold Market Structure Engine",
-      description: "Institutional-grade Forex technical analysis engine engineered specifically for XAUUSD (Gold / US Dollar) spot price action. Formulates automated Change of Character (CHOCH) structural trend reversals, detects resting Trendline Liquidity (TJL) retail stop clusters, and confirms high-probability mitigation entries using multi-timeframe Order Blocks and 3-candle Fair Value Gaps (FVG).",
+      description: "Launched under Codiva Labs as an institutional-grade Forex technical analysis engine engineered specifically for XAUUSD (Gold / US Dollar) spot price action. Formulates automated Change of Character (CHOCH) structural trend reversals, detects resting Trendline Liquidity (TJL) retail stop clusters, and confirms high-probability mitigation entries using multi-timeframe Order Blocks and 3-candle Fair Value Gaps (FVG).",
       tags: ["Pine Script v5", "TypeScript", "Algorithmic Trading", "Smart Money Concepts (SMC)", "Technical Analysis"],
-      highlight: "⚡ Institutional Forex Indicator",
+      highlight: "⚡ Codiva Venture · Institutional Forex Indicator",
       github: null,
       demo: null
     }
@@ -473,12 +483,14 @@ const Projects = () => {
 const Experience = () => {
   const experiences = [
     {
-      role: "Founder @ Codiva Labs & TurfFlow | Co-Founder @ RVOLX",
-      company: "Full-Stack Lead & Architecture",
+      role: "Founder & Full-Stack Lead",
+      company: "Codiva Labs",
       date: "Jul 2025 – Present",
       points: [
-        "Founded and architected TurfFlow, an omnichannel sports arena SaaS with web and WhatsApp booking, distributed slot locking, and Razorpay integration.",
-        "Co-founded RVOLX (FinTech signals SaaS) and engineered a $0/month serverless AI publishing pipeline on GitHub Actions and Meta Graph API, alongside shipping live websites for commercial clients."
+        "What is Codiva: Founded a digital product and software engineering agency delivering custom full-stack web platforms, vertical SaaS architectures, and autonomous AI automation systems for businesses and startups.",
+        "Services Offered: End-to-end full-stack development (React, Next.js, Node.js, PostgreSQL/Supabase), custom SaaS product engineering, conversational WhatsApp AI bots (Baileys + n8n), payment gateway integrations (Razorpay), and high-conversion commercial web design.",
+        "Clients & Demos Delivered: Shipped 3+ production commercial client platforms (Power Up Fitness, Artista Salon, The Ads Architects) and engineered an interactive showcase of 12+ live prototype demos across various industry verticals.",
+        "Proprietary Ventures & Automation: Incubated 4 in-house flagship products (TurfFlow, RVOLX, Aladin, Prosperia) and built an autonomous $0/month serverless AI content pipeline running daily on GitHub Actions and Meta Graph API (@codiva_labs)."
       ]
     },
     {
