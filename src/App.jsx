@@ -343,7 +343,8 @@ const Projects = () => {
       category: "hand-coded",
       title: "AI Gym Coach — Real-Time Computer Vision & Voice Fitness Assistant",
       subtitle: "Hand-Coded Skeletal Kinematics & Real-Time Rep-Counting Engine",
-      description: "Hand-coded completely from scratch without AI assistance to master core Python, MediaPipe Pose Landmarker, and WebRTC streaming. Calculates joint trigonometry angles in real time to monitor valid repetitions and posture across 5 exercises (squats, push-ups, curls, shoulder press, lunges), provides spoken corrective audio feedback via Groq (Llama 3.3) and gTTS, and logs workout histories in SQLite.",
+      description: "Built for automated personal fitness training and real-time exercise posture correction without requiring an expensive gym trainer. Uses live webcam video via MediaPipe Pose Landmarker and WebRTC to monitor skeletal joint angles in real time, automatically count valid reps, and diagnose improper posture across 5 exercises (squats, push-ups, curls, shoulder press, lunges), delivering instant corrective voice coaching via Groq (Llama 3.3) and gTTS while logging sessions in SQLite.",
+      learnings: "Real-time computer vision pipelines with MediaPipe Pose Landmarker, calculating joint angles using 2D/3D trigonometry vectors, streaming low-latency camera frames via WebRTC, and integrating local LLM voice feedback with persistent SQLite session tracking.",
       tags: ["Python", "MediaPipe", "WebRTC", "Trigonometry / Geometry", "Streamlit", "SQLite", "Groq (Llama 3.3)"],
       highlight: "Written Without AI",
       github: "https://github.com/prajwalnangare01/AI-Gym-Coach",
@@ -354,7 +355,8 @@ const Projects = () => {
       category: "hand-coded",
       title: "Weather App — Real-Time Geolocation & Forecast Application",
       subtitle: "Hand-Coded Asynchronous JavaScript & REST API Weather Engine",
-      description: "Hand-coded from scratch without AI to master foundational vanilla JavaScript, asynchronous DOM manipulation, and browser APIs. Features real-time atmospheric data fetching via WeatherAPI, automatic HTML5 Geolocation detection, dynamic gradient UI transitions, background weather videos, and a fully responsive layout built with pure CSS3 Flexbox.",
+      description: "Built for instant global weather lookups with automatic location detection without manual city searches. Features real-time atmospheric data fetching via WeatherAPI, automatic HTML5 Geolocation detection, dynamic gradient UI transitions, background weather videos, and a fully responsive layout built with pure CSS3 Flexbox.",
+      learnings: "Core vanilla JavaScript fundamentals, asynchronous programming with Promises & the Fetch API, browser Geolocation API, DOM lifecycle manipulation without external libraries, and mobile-first CSS Flexbox layout architecture.",
       tags: ["JavaScript (Vanilla)", "HTML5", "CSS3 Flexbox", "WeatherAPI", "DOM Manipulation", "Async / Fetch API"],
       highlight: "Written Without AI",
       github: "https://github.com/prajwalnangare01/WeatherApp",
@@ -365,11 +367,12 @@ const Projects = () => {
       category: "hand-coded",
       title: "WanderLust — Full-Stack Vacation Rental & Property Listing Platform",
       subtitle: "Hand-Coded Full-Stack MVC Architecture & Authentication System",
-      description: "Hand-coded completely from scratch without AI assistance to master full-stack MVC design patterns, relational document modeling, and server-side rendering. Built for travelers and property hosts to discover, list, and review vacation rentals with secure cookie-based session authentication via Passport.js, Cloudinary media storage, Mapbox geolocation, and full CRUD operations on MongoDB Atlas.",
+      description: "Built as a full-featured vacation rental and property marketplace clone of Airbnb. Enables travelers and property hosts to discover, list, and review accommodations with secure cookie-based session authentication via Passport.js, Cloudinary media storage, Mapbox geolocation mapping, and full CRUD operations on MongoDB Atlas.",
+      learnings: "Full-stack Model-View-Controller (MVC) architecture, relational document modeling and schema validations in MongoDB/Mongoose, server-side rendering with EJS templates, secure session authentication with Passport.js, and cloud media management with Cloudinary.",
       tags: ["Node.js", "Express.js", "MongoDB", "Mongoose", "EJS", "Bootstrap 5", "Passport.js", "Cloudinary"],
       highlight: "Written Without AI",
       github: "https://github.com/prajwalnangare01/WanderLust",
-      demo: null
+      demo: "https://wanderlust-lwq5.onrender.com/"
     },
     {
       id: "turfflow",
@@ -485,8 +488,8 @@ const Projects = () => {
             onClick={() => setActiveCategory("hand-coded")}
             className={`px-4 py-2 rounded-lg text-xs font-semibold transition-all ${
               activeCategory === "hand-coded"
-                ? "bg-emerald-700 text-white shadow-sm"
-                : "bg-white border border-emerald-300/80 text-emerald-800 hover:bg-emerald-50"
+                ? "bg-slate-900 text-white shadow-sm"
+                : "bg-white border border-slate-200 text-slate-600 hover:text-slate-900 hover:border-slate-300"
             }`}
           >
             Written Without AI ({handCodedCount})
@@ -517,20 +520,22 @@ const Projects = () => {
                 <h3 className="text-lg font-bold text-slate-900">{proj.title}</h3>
                 <p className="text-slate-500 text-sm mt-1 mb-4">{proj.subtitle}</p>
                 {proj.highlight && (
-                  <span className={`inline-flex items-center gap-1.5 px-2.5 py-1 rounded-sm text-xs font-semibold ${
-                    proj.category === "hand-coded"
-                      ? "bg-emerald-50 border border-emerald-200 text-emerald-800"
-                      : "bg-slate-200/50 text-slate-700"
-                  }`}>
+                  <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-md bg-slate-100 text-slate-800 text-xs font-semibold border border-slate-200/80">
                     {proj.highlight}
                   </span>
                 )}
               </div>
 
               <div className="w-full md:w-2/3">
-                <p className="text-slate-600 leading-relaxed mb-6">
+                <p className="text-slate-600 leading-relaxed mb-4">
                   {proj.description}
                 </p>
+                {proj.learnings && (
+                  <div className="mb-5 py-3 px-4 rounded-md bg-slate-100/80 border border-slate-200 text-xs leading-relaxed">
+                    <span className="font-semibold text-slate-900 block mb-1">What I Learned:</span>
+                    <span className="text-slate-600">{proj.learnings}</span>
+                  </div>
+                )}
                 <div className="flex flex-wrap gap-x-4 gap-y-2 text-sm text-slate-500 font-medium mb-6">
                   {proj.tags.map((tag, i) => (
                     <span key={i} className="flex items-center gap-1.5">
