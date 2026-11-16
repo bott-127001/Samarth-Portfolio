@@ -56,6 +56,12 @@ const InstagramIcon = ({ size = 24, className = "" }) => (
   </svg>
 );
 
+const LeetcodeIcon = ({ size = 24, className = "" }) => (
+  <svg xmlns="http://www.w3.org/2000/svg" width={size} height={size} viewBox="0 0 24 24" fill="currentColor" className={className}>
+    <path d="M13.483 0a1.374 1.374 0 0 0-.961.438L7.116 6.226l-3.854 4.126a5.266 5.266 0 0 0-1.209 2.104 5.35 5.35 0 0 0-.125.513 5.527 5.527 0 0 0 .062 2.362 5.83 5.83 0 0 0 .349 1.017 5.938 5.938 0 0 0 1.271 1.818l4.277 4.193.039.038c2.248 2.165 5.852 2.133 8.063-.074l2.396-2.392c.54-.54.54-1.414.003-1.955a1.378 1.378 0 0 0-1.951-.003l-2.396 2.392a3.021 3.021 0 0 1-4.205.038l-.02-.019-4.276-4.193c-.652-.64-.972-1.469-.948-2.263a2.68 2.68 0 0 1 .066-.523 2.545 2.545 0 0 1 .619-1.164L9.13 8.114c1.058-1.134 3.204-1.27 4.43-.278l3.501 2.831c.593.48 1.461.387 1.94-.207a1.384 1.384 0 0 0-.207-1.943l-3.5-2.831c-.8-.647-1.766-1.045-2.774-1.202l2.015-2.158A1.384 1.384 0 0 0 13.483 0zm-2.866 12.815a1.38 1.38 0 0 0-1.38 1.382 1.38 1.38 0 0 0 1.38 1.382H20.79a1.38 1.38 0 0 0 1.38-1.382 1.38 1.38 0 0 0-1.38-1.382z" />
+  </svg>
+);
+
 const NavBar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -113,8 +119,7 @@ const TypewriterHeading = () => {
     "Full-Stack Engineer",
     "SaaS & AI Builder",
     "GenAI & Automation Developer",
-    "Founder @ Codiva & TurfFlow",
-    "B.Sc. CS Student"
+    "Founder @ Codiva & TurfFlow"
   ];
   const [currentPhraseIndex, setCurrentPhraseIndex] = useState(0);
   const [currentText, setCurrentText] = useState("");
@@ -122,7 +127,8 @@ const TypewriterHeading = () => {
 
   useEffect(() => {
     let timer;
-    const currentFullPhrase = phrases[currentPhraseIndex];
+    const currentFullPhrase = phrases[currentPhraseIndex] || phrases[0];
+    if (!currentFullPhrase) return;
 
     if (isDeleting) {
       timer = setTimeout(() => {
@@ -186,6 +192,9 @@ const Hero = () => (
           </a>
           <a href="https://github.com/prajwalnangare01" target="_blank" rel="noreferrer" className="px-6 py-3 rounded-md bg-transparent text-slate-600 hover:text-slate-900 transition-colors flex items-center gap-2">
             <GithubIcon size={16} /> GitHub Profile
+          </a>
+          <a href="https://leetcode.com/u/prajwalnangare01/" target="_blank" rel="noreferrer" className="px-6 py-3 rounded-md bg-transparent text-slate-600 hover:text-slate-900 transition-colors flex items-center gap-2">
+            <LeetcodeIcon size={16} /> LeetCode
           </a>
         </motion.div>
       </motion.div>
@@ -262,8 +271,8 @@ const CodivaSection = () => {
 const Skills = () => {
   const categories = [
     { title: "Frontend", skills: ["React 18", "Next.js 14", "TypeScript", "JavaScript (ES6+)", "Tailwind CSS", "HTML5", "CSS3", "MUI", "Chart.js"] },
-    { title: "Backend", skills: ["Node.js", "Express.js", "PostgreSQL", "Supabase", "MongoDB", "MySQL", "Redis", "REST APIs"] },
-    { title: "AI / ML", skills: ["Python", "Google Gemini API", "PyTorch", "TensorFlow", "Scikit-learn", "NumPy", "Pandas", "n8n", "Meta Graph API"] },
+    { title: "Backend", skills: ["Node.js", "Express.js", "PostgreSQL", "Supabase", "MongoDB", "MySQL", "Redis", "SQLite", "REST APIs"] },
+    { title: "AI / ML", skills: ["Python", "MediaPipe", "WebRTC", "Groq API", "Google Gemini API", "PyTorch", "TensorFlow", "Scikit-learn", "NumPy", "Pandas", "n8n", "Meta Graph API"] },
     { title: "DevOps & Tools", skills: ["GitHub Actions", "Docker", "Kubernetes", "CI/CD", "Razorpay API", "Git", "GitHub", "Vercel", "Render"] }
   ];
 
@@ -312,7 +321,7 @@ const Projects = () => {
     {
       title: "TurfFlow — Multi-Sport Arena SaaS & WhatsApp Booking Engine",
       subtitle: "Omnichannel Sports Arena Management & Automated Reservation Engine",
-      description: "Founded and engineered an enterprise sports turf management and omnichannel booking platform supporting web and natural-language WhatsApp (English/Hinglish) reservations. Solves double-booking race conditions via 5-minute Redis distributed slot locks, integrates Razorpay with webhook idempotency and late-capture auto-refunds, generates 4-digit QR Gate Passes, and automates dynamic pricing, rainout cancellations, and monthly owner financial ledgers—validated by a 38-case edge-test suite.",
+      description: "Built for sports arena and box cricket turf operators to completely automate customer reservations, payments, and daily facility operations without manual staff or phone calls. Enables players to check availability and book instantly via web or conversational WhatsApp (English/Hinglish). Solves double-booking race conditions through 5-minute Redis distributed slot locks, automates Razorpay payments with webhook idempotency and late-capture auto-refunds, generates 4-digit QR Gate Passes, and automates dynamic pricing, rainout cancellations, and monthly owner financial ledgers.",
       tags: ["React 18", "TypeScript", "Node.js", "Express", "PostgreSQL", "Supabase", "Redis", "Razorpay", "Baileys + n8n"],
       highlight: "🚀 Founder · Flagship B2B SaaS",
       github: null,
@@ -332,16 +341,25 @@ const Projects = () => {
     {
       title: "Codiva Autonomous Media Engine — Serverless AI Content Pipeline",
       subtitle: "Autonomous Cloud Publishing & Multi-Model Generation System",
-      description: "Fully autonomous cloud publishing system executing a 90-day MERN stack curriculum (2 daily posts) on @codiva_labs at $0.00/month infrastructure cost. Uses ephemeral GitHub Actions cron runners, Git-as-a-database state tracking, a multi-model Gemini fallback chain, native C++ SVG-to-PNG rasterization (<150ms renders), and direct Meta Graph API publishing.",
+      description: "Built to completely automate brand growth, developer educational content, and social media marketing for Codiva Labs without manual graphic design or scheduling. Autonomously writes, designs, and publishes technical MERN stack carousels (2 posts daily) directly to Instagram (@codiva_labs) at $0.00/month infrastructure cost—powered by ephemeral GitHub Actions cron runners, a multi-model Gemini AI chain, Git-as-a-database state tracking, C++ SVG-to-PNG rasterization (<150ms renders), and Meta Graph API publishing.",
       tags: ["Node.js", "GitHub Actions", "Google Gemini API", "@resvg/resvg-js", "Meta Graph API v23.0"],
       highlight: "⚡ $0/mo Serverless System",
       github: "https://github.com/prajwalnangare01/codiva_automation",
       demo: "https://instagram.com/codiva_labs"
     },
     {
+      title: "AI Gym Coach — Real-Time Computer Vision & Voice Fitness Assistant",
+      subtitle: "Real-Time Skeletal Form Corrector & Rep Counting Engine",
+      description: "Built for automated personal fitness training and injury prevention without requiring an expensive gym trainer. Uses live webcam video via MediaPipe Pose Landmarker and WebRTC to monitor skeletal joint angles in real time, automatically count valid reps, and diagnose improper posture across 5 exercises (squats, push-ups, curls, shoulder press, lunges). Delivers instant spoken corrective audio coaching through Groq (Llama 3.3) and gTTS, while logging workout sessions in SQLite.",
+      tags: ["Python", "MediaPipe", "WebRTC", "Groq (Llama 3.3)", "gTTS", "Streamlit", "SQLite"],
+      highlight: "🏋️ Computer Vision & LLM",
+      github: "https://github.com/prajwalnangare01/AI-Gym-Coach",
+      demo: "https://ai-gym-coach-ktsskhrh7kk6vc9uxjpkum.streamlit.app/"
+    },
+    {
       title: "HemaLens — AI Blood Report Analyzer",
       subtitle: "AI Medical Diagnostic & Biomarker Analysis Tool",
-      description: "AI-powered app that analyzes blood test report images, extracts biomarkers, and generates simplified medical insights in English & Hindi with personalized dietary recommendations.",
+      description: "Built to make complex medical blood test reports easily understandable for patients without waiting for clinical consultations. Analyzes uploaded pathology report images to extract critical hematology biomarkers (CBC, hemoglobin, platelets, lipid profiles), detect out-of-range anomalies, and translate dense medical jargon into clear, simplified health summaries in English and Hindi—complete with personalized dietary and lifestyle recommendations powered by Google Gemini AI.",
       tags: ["Node.js", "Express.js", "JavaScript", "Google Gemini AI"],
       highlight: "🏆 Hackathon Runner-Up",
       github: "https://github.com/prajwalnangare01/HemaLens",
@@ -448,7 +466,7 @@ const Experience = () => {
     {
       role: "Founder @ Codiva Labs & TurfFlow | Co-Founder @ RVOLX",
       company: "Full-Stack Lead & Architecture",
-      date: "Oct 2024 – Present",
+      date: "Jul 2025 – Present",
       points: [
         "Founded and architected TurfFlow, an omnichannel sports arena SaaS with web and WhatsApp booking, distributed slot locking, and Razorpay integration.",
         "Co-founded RVOLX (FinTech signals SaaS) and engineered a $0/month serverless AI publishing pipeline on GitHub Actions and Meta Graph API, alongside shipping live websites for commercial clients."
@@ -576,6 +594,9 @@ const Footer = () => (
         </a>
         <a href="https://github.com/prajwalnangare01" target="_blank" rel="noreferrer" className="w-10 h-10 rounded-full bg-white border border-slate-200 flex items-center justify-center hover:bg-slate-900 hover:text-white transition-colors" title="GitHub">
           <GithubIcon size={18} />
+        </a>
+        <a href="https://leetcode.com/u/prajwalnangare01/" target="_blank" rel="noreferrer" className="w-10 h-10 rounded-full bg-white border border-slate-200 flex items-center justify-center hover:bg-slate-900 hover:text-white transition-colors" title="LeetCode">
+          <LeetcodeIcon size={18} />
         </a>
       </div>
     </div>
