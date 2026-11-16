@@ -129,7 +129,7 @@ const TypewriterHeading = () => {
     "Full-Stack Engineer",
     "SaaS & AI Builder",
     "GenAI & Automation Developer",
-    "Founder @ Codiva Labs"
+    "Co-Founder @ Codiva Labs"
   ];
   const [currentPhraseIndex, setCurrentPhraseIndex] = useState(0);
   const [currentText, setCurrentText] = useState("");
@@ -190,7 +190,7 @@ const Hero = () => (
         <TypewriterHeading />
 
         <motion.p variants={fadeIn} className="text-lg text-slate-600 leading-relaxed max-w-2xl mb-10">
-          A Full-Stack Engineer based in Pune, India. I architect production-grade web applications, vertical SaaS platforms, and autonomous AI workflows—from concurrency-safe booking engines to zero-cost serverless publishing pipelines. Founder of Codiva Labs, delivering full-stack development, custom SaaS engineering, and AI automation services.
+          A Full-Stack Developer based in Pune, India, driven by building practical, high-impact software. Through co-founding Codiva Labs, I've developed end-to-end SaaS platforms, algorithmic market signal tools, and AI-powered business workflows. I am now seeking full-time Software Engineering opportunities where I can tackle complex technical challenges at scale.
         </motion.p>
 
         <motion.div variants={fadeIn} className="flex flex-wrap gap-4 text-sm font-medium">
@@ -231,7 +231,7 @@ const CodivaSection = () => {
           <div className="flex flex-col md:flex-row gap-8 items-start">
             <div className="w-full md:w-1/3 shrink-0">
               <h3 className="text-3xl font-extrabold text-white mb-2">Codiva.</h3>
-              <p className="text-slate-400 font-medium mb-6">Founder & Full-Stack Lead</p>
+              <p className="text-slate-400 font-medium mb-6">Co-Founder & Full-Stack Lead</p>
               <div className="flex flex-wrap gap-3">
                 <a href="https://codivalabs.com" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 px-5 py-2.5 bg-white text-slate-900 rounded-md text-sm font-semibold hover:bg-slate-100 transition-colors">
                   <ExternalLink size={16} /> Visit Website
@@ -243,7 +243,7 @@ const CodivaSection = () => {
             </div>
             <div className="w-full md:w-2/3">
               <p className="text-slate-300 leading-relaxed text-lg mb-6">
-                Founded a software and digital product studio delivering production-grade web platforms, vertical SaaS solutions, and AI automation pipelines. Under Codiva, we build and launch proprietary ventures—including TurfFlow, RVOLX, Aladin, and Prosperia—alongside live commercial client websites and interactive showcases, supported by an autonomous $0/month serverless content engine running daily on @codiva_labs.
+                Co-founded a software and digital product studio delivering production-grade web platforms, vertical SaaS solutions, and AI automation pipelines. Under Codiva, we build and launch proprietary ventures—including TurfFlow, RVOLX, Aladin, and Prosperia—alongside live commercial client websites and interactive showcases, supported by an autonomous $0/month serverless content engine running daily on @codiva_labs.
               </p>
               <div className="pt-4 border-t border-slate-700/60 flex flex-col gap-3 text-sm text-slate-400">
                 <div className="flex flex-wrap items-center gap-x-2 gap-y-1">
@@ -600,7 +600,7 @@ const Projects = () => {
 const Experience = () => {
   const experiences = [
     {
-      role: "Founder & Full-Stack Lead",
+      role: "Co-Founder & Full-Stack Lead",
       company: "Codiva Labs",
       date: "Jul 2025 – Present",
       points: [
