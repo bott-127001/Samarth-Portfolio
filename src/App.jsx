@@ -221,8 +221,7 @@ const CodivaSection = () => {
           viewport={{ once: true }}
           className="bg-slate-800/50 rounded-2xl p-8 md:p-12 border border-slate-700/50 hover:border-slate-600 transition-colors shadow-2xl"
         >
-          {/* Header Row */}
-          <div className="flex flex-col md:flex-row gap-8 items-start mb-8 pb-8 border-b border-slate-700/60">
+          <div className="flex flex-col md:flex-row gap-8 items-start">
             <div className="w-full md:w-1/3 shrink-0">
               <h3 className="text-3xl font-extrabold text-white mb-2">Codiva.</h3>
               <p className="text-slate-400 font-medium mb-6">Founder & Full-Stack Lead</p>
@@ -236,140 +235,47 @@ const CodivaSection = () => {
               </div>
             </div>
             <div className="w-full md:w-2/3">
-              <p className="text-slate-300 leading-relaxed text-lg">
-                Founded a software and digital product studio delivering production-grade web platforms, vertical SaaS solutions, and AI automation pipelines. Under Codiva, we architect, launch, and operate specialized products and services alongside delivering high-converting client platforms.
+              <p className="text-slate-300 leading-relaxed text-lg mb-6">
+                Founded a software and digital product studio delivering production-grade web platforms, vertical SaaS solutions, and AI automation pipelines. Under Codiva, we build and launch proprietary ventures—including TurfFlow, RVOLX, Aladin, and Prosperia—alongside live commercial client websites and interactive showcases, supported by an autonomous $0/month serverless content engine running daily on @codiva_labs.
               </p>
-              <div className="mt-6 flex flex-wrap gap-x-6 gap-y-2 text-sm text-slate-400">
-                <div className="flex items-center gap-2">
+              <div className="pt-4 border-t border-slate-700/60 flex flex-col gap-3 text-sm text-slate-400">
+                <div className="flex flex-wrap items-center gap-x-2 gap-y-1">
+                  <span className="text-slate-300 font-medium">Services & Products:</span>
+                  <a href="#turfflow" className="hover:text-slate-200 underline decoration-slate-600 underline-offset-2 transition-colors">
+                    TurfFlow
+                  </a>
+                  <span className="text-slate-600">•</span>
+                  <a href="#rvolx" className="hover:text-slate-200 underline decoration-slate-600 underline-offset-2 transition-colors">
+                    RVOLX
+                  </a>
+                  <span className="text-slate-600">•</span>
+                  <a href="#aladin" className="hover:text-slate-200 underline decoration-slate-600 underline-offset-2 transition-colors">
+                    Aladin <span className="text-[11px] text-amber-400 font-medium">(Coming Soon)</span>
+                  </a>
+                  <span className="text-slate-600">•</span>
+                  <a href="#prosperia" className="hover:text-slate-200 underline decoration-slate-600 underline-offset-2 transition-colors">
+                    Prosperia
+                  </a>
+                </div>
+                <div className="flex flex-wrap items-center gap-x-2 gap-y-1">
                   <span className="text-slate-300 font-medium">Interactive Showcase:</span>
-                  <a href="https://codivalabs.com/portfolio" target="_blank" rel="noreferrer" className="text-blue-400 hover:text-blue-300 transition-colors inline-flex items-center gap-1 font-medium">
+                  <a href="https://codivalabs.com/portfolio" target="_blank" rel="noreferrer" className="hover:text-slate-200 underline decoration-slate-600 underline-offset-2 transition-colors inline-flex items-center gap-1 font-normal">
                     12 Live Demos <ExternalLink size={13} />
                   </a>
                 </div>
-                <div className="flex items-center gap-2">
+                <div className="flex flex-wrap items-center gap-x-3 gap-y-1">
                   <span className="text-slate-300 font-medium">Live Client Sites:</span>
-                  <a href="https://www.powerupfitness.co.in/" target="_blank" rel="noreferrer" className="hover:text-slate-200 underline decoration-slate-600 underline-offset-2 transition-colors">Power Up Fitness</a>
+                  <a href="https://www.powerupfitness.co.in/" target="_blank" rel="noreferrer" className="hover:text-slate-200 underline decoration-slate-600 underline-offset-2 transition-colors">
+                    Power Up Fitness
+                  </a>
                   <span className="text-slate-600">•</span>
-                  <a href="https://artistabysupriya.com/" target="_blank" rel="noreferrer" className="hover:text-slate-200 underline decoration-slate-600 underline-offset-2 transition-colors">Artista Salon</a>
+                  <a href="https://artistabysupriya.com/" target="_blank" rel="noreferrer" className="hover:text-slate-200 underline decoration-slate-600 underline-offset-2 transition-colors">
+                    Artista Salon
+                  </a>
                   <span className="text-slate-600">•</span>
-                  <a href="https://theadsarchitect.netlify.app/" target="_blank" rel="noreferrer" className="hover:text-slate-200 underline decoration-slate-600 underline-offset-2 transition-colors">The Ads Architects</a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          {/* Services & Products Grid */}
-          <div>
-            <h4 className="text-xs font-bold uppercase tracking-widest text-slate-400 mb-5">
-              Services & Products
-            </h4>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              {/* TurfFlow */}
-              <div className="p-5 rounded-xl bg-slate-900/60 border border-slate-700/50 hover:border-slate-600 transition-colors flex flex-col justify-between">
-                <div>
-                  <div className="flex items-center justify-between gap-2 mb-2">
-                    <div className="flex items-center gap-2 flex-wrap">
-                      <h5 className="text-white font-bold text-base">TurfFlow</h5>
-                      <span className="text-[11px] font-semibold px-2 py-0.5 rounded bg-blue-500/20 text-blue-300 border border-blue-500/30">
-                        Sports Arena SaaS
-                      </span>
-                    </div>
-                    <a href="https://turfflow-codiva.vercel.app/" target="_blank" rel="noreferrer" className="text-slate-400 hover:text-white transition-colors p-1" title="View Live Demo">
-                      <ExternalLink size={14} />
-                    </a>
-                  </div>
-                  <p className="text-slate-300 text-sm leading-relaxed mb-3">
-                    Omnichannel sports arena & box cricket booking SaaS with automated WhatsApp reservations, 5-minute Redis slot locking, and Razorpay auto-refunds.
-                  </p>
-                </div>
-                <div className="flex items-center gap-3 pt-2 text-xs text-slate-400 border-t border-slate-800">
-                  <a href="https://turfflow-codiva.vercel.app/" target="_blank" rel="noreferrer" className="text-blue-400 hover:text-blue-300 font-medium inline-flex items-center gap-1">
-                    Live Demo <ExternalLink size={12} />
+                  <a href="https://theadsarchitect.netlify.app/" target="_blank" rel="noreferrer" className="hover:text-slate-200 underline decoration-slate-600 underline-offset-2 transition-colors">
+                    The Ads Architects
                   </a>
-                  <span className="text-slate-700">•</span>
-                  <a href="https://instagram.com/turf_flow" target="_blank" rel="noreferrer" className="text-slate-400 hover:text-slate-200 inline-flex items-center gap-1">
-                    @turf_flow
-                  </a>
-                </div>
-              </div>
-
-              {/* RVOLX */}
-              <div className="p-5 rounded-xl bg-slate-900/60 border border-slate-700/50 hover:border-slate-600 transition-colors flex flex-col justify-between">
-                <div>
-                  <div className="flex items-center justify-between gap-2 mb-2">
-                    <div className="flex items-center gap-2 flex-wrap">
-                      <h5 className="text-white font-bold text-base">RVOLX</h5>
-                      <span className="text-[11px] font-semibold px-2 py-0.5 rounded bg-emerald-500/20 text-emerald-300 border border-emerald-500/30">
-                        FinTech Signals SaaS
-                      </span>
-                    </div>
-                    <a href="https://rvolx.netlify.app/" target="_blank" rel="noreferrer" className="text-slate-400 hover:text-white transition-colors p-1" title="View Live Demo">
-                      <ExternalLink size={14} />
-                    </a>
-                  </div>
-                  <p className="text-slate-300 text-sm leading-relaxed mb-3">
-                    Quantitative intraday trading signals platform for NSE NIFTY 200 cash equities with HMAC-SHA256 signal ingestion bridge and sub-450ms WhatsApp alert delivery.
-                  </p>
-                </div>
-                <div className="flex items-center gap-3 pt-2 text-xs text-slate-400 border-t border-slate-800">
-                  <a href="https://rvolx.netlify.app/" target="_blank" rel="noreferrer" className="text-emerald-400 hover:text-emerald-300 font-medium inline-flex items-center gap-1">
-                    Live Demo <ExternalLink size={12} />
-                  </a>
-                  <span className="text-slate-700">•</span>
-                  <a href="https://instagram.com/rvol_x" target="_blank" rel="noreferrer" className="text-slate-400 hover:text-slate-200 inline-flex items-center gap-1">
-                    @rvol_x
-                  </a>
-                </div>
-              </div>
-
-              {/* Prosperia */}
-              <div className="p-5 rounded-xl bg-slate-900/60 border border-slate-700/50 hover:border-slate-600 transition-colors flex flex-col justify-between">
-                <div>
-                  <div className="flex items-center justify-between gap-2 mb-2">
-                    <div className="flex items-center gap-2 flex-wrap">
-                      <h5 className="text-white font-bold text-base">Prosperia</h5>
-                      <span className="text-[11px] font-semibold px-2 py-0.5 rounded bg-purple-500/20 text-purple-300 border border-purple-500/30">
-                        PropTech AI SaaS
-                      </span>
-                    </div>
-                    <a href="https://real-estate-iota-six-59.vercel.app/" target="_blank" rel="noreferrer" className="text-slate-400 hover:text-white transition-colors p-1" title="View Live Demo">
-                      <ExternalLink size={14} />
-                    </a>
-                  </div>
-                  <p className="text-slate-300 text-sm leading-relaxed mb-3">
-                    AI-powered real estate lead qualification, site visit scheduling, and pipeline CRM engineered to stop lead drop-offs and recover missed sales revenue.
-                  </p>
-                </div>
-                <div className="flex items-center gap-3 pt-2 text-xs text-slate-400 border-t border-slate-800">
-                  <a href="https://real-estate-iota-six-59.vercel.app/" target="_blank" rel="noreferrer" className="text-purple-400 hover:text-purple-300 font-medium inline-flex items-center gap-1">
-                    Live Demo <ExternalLink size={12} />
-                  </a>
-                  <span className="text-slate-700">•</span>
-                  <a href="https://github.com/bott-127001/Prosperia" target="_blank" rel="noreferrer" className="text-slate-400 hover:text-slate-200 inline-flex items-center gap-1">
-                    GitHub Code
-                  </a>
-                </div>
-              </div>
-
-              {/* Aladin */}
-              <div className="p-5 rounded-xl bg-slate-900/60 border border-slate-700/50 hover:border-slate-600 transition-colors flex flex-col justify-between">
-                <div>
-                  <div className="flex items-center justify-between gap-2 mb-2">
-                    <div className="flex items-center gap-2 flex-wrap">
-                      <h5 className="text-white font-bold text-base">Aladin</h5>
-                      <span className="text-[11px] font-semibold px-2 py-0.5 rounded bg-amber-500/20 text-amber-300 border border-amber-500/30 flex items-center gap-1">
-                        <span className="w-1.5 h-1.5 rounded-full bg-amber-400 animate-pulse" /> Coming Soon
-                      </span>
-                    </div>
-                  </div>
-                  <p className="text-slate-300 text-sm leading-relaxed mb-3">
-                    Institutional SMC-based Forex technical analysis engine for XAUUSD (Gold) spot price action, detecting CHOCH structural trend reversals and liquidity sweeps.
-                  </p>
-                </div>
-                <div className="flex items-center gap-3 pt-2 text-xs text-slate-400 border-t border-slate-800">
-                  <span className="text-amber-400 font-medium inline-flex items-center gap-1">
-                    In Active Development
-                  </span>
                 </div>
               </div>
             </div>
@@ -439,7 +345,7 @@ const Projects = () => {
       subtitle: "Hand-Coded Skeletal Kinematics & Real-Time Rep-Counting Engine",
       description: "Hand-coded completely from scratch without AI assistance to master core Python, MediaPipe Pose Landmarker, and WebRTC streaming. Calculates joint trigonometry angles in real time to monitor valid repetitions and posture across 5 exercises (squats, push-ups, curls, shoulder press, lunges), provides spoken corrective audio feedback via Groq (Llama 3.3) and gTTS, and logs workout histories in SQLite.",
       tags: ["Python", "MediaPipe", "WebRTC", "Trigonometry / Geometry", "Streamlit", "SQLite", "Groq (Llama 3.3)"],
-      highlight: "💻 100% Hand-Coded (Zero AI)",
+      highlight: "💻 Written Without AI",
       github: "https://github.com/prajwalnangare01/AI-Gym-Coach",
       demo: "https://ai-gym-coach-ktsskhrh7kk6vc9uxjpkum.streamlit.app/"
     },
@@ -448,9 +354,9 @@ const Projects = () => {
       category: "hand-coded",
       title: "Weather App — Real-Time Geolocation & Forecast Application",
       subtitle: "Hand-Coded Asynchronous JavaScript & REST API Weather Engine",
-      description: "Hand-coded 100% from scratch without AI to master foundational vanilla JavaScript, asynchronous DOM manipulation, and browser APIs. Features real-time atmospheric data fetching via WeatherAPI, automatic HTML5 Geolocation detection, dynamic gradient UI transitions, background weather videos, and a fully responsive layout built with pure CSS3 Flexbox.",
+      description: "Hand-coded from scratch without AI to master foundational vanilla JavaScript, asynchronous DOM manipulation, and browser APIs. Features real-time atmospheric data fetching via WeatherAPI, automatic HTML5 Geolocation detection, dynamic gradient UI transitions, background weather videos, and a fully responsive layout built with pure CSS3 Flexbox.",
       tags: ["JavaScript (Vanilla)", "HTML5", "CSS3 Flexbox", "WeatherAPI", "DOM Manipulation", "Async / Fetch API"],
-      highlight: "💻 100% Hand-Coded (Zero AI)",
+      highlight: "💻 Written Without AI",
       github: "https://github.com/prajwalnangare01/WeatherApp",
       demo: "https://weatherappprajwal.netlify.app/"
     },
@@ -547,7 +453,7 @@ const Projects = () => {
               Selected Projects
             </motion.h2>
             <p className="text-slate-500 text-sm mt-2 max-w-xl">
-              Showcasing both <strong className="text-slate-800 font-semibold">100% hand-coded fundamentals</strong> (pure code without AI to master algorithms, DOM APIs, and computer vision geometry) and <strong className="text-slate-800 font-semibold">scaled SaaS & AI architectures</strong>.
+              Showcasing both <strong className="text-slate-800 font-semibold">projects written without AI</strong> (pure code to master algorithms, DOM APIs, and computer vision geometry) and <strong className="text-slate-800 font-semibold">scaled SaaS & AI architectures</strong>.
             </p>
           </div>
         </div>
@@ -573,7 +479,7 @@ const Projects = () => {
             }`}
           >
             <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" />
-            100% Hand-Coded (Zero AI) ({handCodedCount})
+            💻 Written Without AI ({handCodedCount})
           </button>
           <button
             onClick={() => setActiveCategory("saas")}
@@ -689,7 +595,51 @@ const Experience = () => {
           </span>
         </>,
         <>
-          <strong className="text-slate-900 font-semibold">Clients & Demos Delivered:</strong> Shipped <strong className="text-slate-900 font-semibold">3+ live commercial client platforms</strong> (<a href="https://www.powerupfitness.co.in/" target="_blank" rel="noreferrer" className="underline decoration-slate-400 hover:text-slate-900">Power Up Fitness</a>, <a href="https://artistabysupriya.com/" target="_blank" rel="noreferrer" className="underline decoration-slate-400 hover:text-slate-900">Artista Salon</a>, <a href="https://theadsarchitect.netlify.app/" target="_blank" rel="noreferrer" className="underline decoration-slate-400 hover:text-slate-900">The Ads Architects</a>) and created an interactive showcase of <strong className="text-slate-900 font-semibold">12+ live prototype demos</strong> across multiple industry verticals.
+          <strong className="text-slate-900 font-semibold">Clients & Demos Delivered:</strong>
+          <span className="block mt-2 space-y-2 pl-3 border-l-2 border-slate-200">
+            <span className="block">
+              <span className="text-slate-700 font-medium block mb-1.5">• <strong className="text-slate-900 font-semibold">3+ Live Commercial Client Platforms:</strong></span>
+              <span className="flex flex-wrap items-center gap-2 pl-4">
+                <a
+                  href="https://www.powerupfitness.co.in/"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="inline-flex items-center gap-1.5 px-3 py-1 rounded-md bg-slate-100 hover:bg-slate-200 text-slate-800 text-xs font-semibold border border-slate-200/80 transition-colors"
+                >
+                  Power Up Fitness <ExternalLink size={12} className="text-slate-400" />
+                </a>
+                <a
+                  href="https://artistabysupriya.com/"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="inline-flex items-center gap-1.5 px-3 py-1 rounded-md bg-slate-100 hover:bg-slate-200 text-slate-800 text-xs font-semibold border border-slate-200/80 transition-colors"
+                >
+                  Artista Salon <ExternalLink size={12} className="text-slate-400" />
+                </a>
+                <a
+                  href="https://theadsarchitect.netlify.app/"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="inline-flex items-center gap-1.5 px-3 py-1 rounded-md bg-slate-100 hover:bg-slate-200 text-slate-800 text-xs font-semibold border border-slate-200/80 transition-colors"
+                >
+                  The Ads Architects <ExternalLink size={12} className="text-slate-400" />
+                </a>
+              </span>
+            </span>
+            <span className="block pt-1">
+              <span className="text-slate-700 font-medium block mb-1.5">• <strong className="text-slate-900 font-semibold">Interactive Prototype Showcase:</strong></span>
+              <span className="block pl-4">
+                <a
+                  href="https://codivalabs.com/portfolio"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="inline-flex items-center gap-1.5 px-3 py-1 rounded-md bg-slate-100 hover:bg-slate-200 text-slate-800 text-xs font-semibold border border-slate-200/80 transition-colors"
+                >
+                  12+ Live Prototype Demos across multiple industry verticals <ExternalLink size={12} className="text-slate-400" />
+                </a>
+              </span>
+            </span>
+          </span>
         </>
       ]
     },
