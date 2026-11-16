@@ -296,9 +296,9 @@ const CodivaSection = () => {
 const Skills = () => {
   const categories = [
     { title: "Frontend", skills: ["React", "Next.js", "TypeScript", "JavaScript", "Tailwind CSS", "HTML5", "CSS3", "MUI"] },
-    { title: "Backend", skills: ["Node.js", "Express.js", "PostgreSQL", "Supabase", "MongoDB", "MySQL", "Redis", "REST APIs"] },
-    { title: "AI / ML", skills: ["Python", "Generative AI", "Agentic AI", "RAG", "GANs", "Deep Learning", "Machine Learning", "PyTorch", "TensorFlow", "Scikit-learn", "MediaPipe", "Groq API", "Google Gemini API", "n8n"] },
-    { title: "DevOps & Tools", skills: ["GitHub Actions", "Docker", "Kubernetes", "CI/CD", "Razorpay API", "Git", "GitHub", "Vercel", "Render"] }
+    { title: "Backend", skills: ["Node.js", "Express.js", "PostgreSQL", "Supabase", "MongoDB", "MySQL", "Redis"] },
+    { title: "AI / ML", skills: ["Python", "Generative AI", "Agentic AI", "RAG", "GANs", "Deep Learning", "Machine Learning", "PyTorch", "TensorFlow", "Scikit-learn", "MediaPipe", "n8n"] },
+    { title: "DevOps & Tools", skills: ["GitHub Actions", "Docker", "Kubernetes", "CI/CD", "Razorpay", "Git", "GitHub", "Vercel", "Render"] }
   ];
 
   return (
