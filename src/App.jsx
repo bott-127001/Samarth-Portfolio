@@ -410,8 +410,8 @@ const Projects = () => {
       category: "saas",
       title: "Prosperia — AI Real Estate Lead & Revenue Recovery SaaS",
       subtitle: "AI PropTech Lead Qualification, Calendar Scheduler & Pipeline CRM",
-      description: "Launched under Codiva Labs as an autonomous customer acquisition and pipeline revenue recovery SaaS engineered for real estate agencies and developers. Features omnichannel conversational lead capture and qualification via Groq Llama 3.3 and Gemini tool contracts, semantic property inventory matching using pgvector, automated site visit booking with two-way calendar sync, and dormant CRM lead re-activation campaigns.",
-      tags: ["React", "Node.js", "Express", "PostgreSQL", "Supabase RLS", "pgvector", "Groq AI", "Meta APIs"],
+      description: "Launched under Codiva Labs, Prosperia is an AI sales assistant and CRM automation SaaS for real estate agencies and developers. Whenever a buyer or tenant submits an inquiry, Prosperia calls or texts them within 60 seconds using AI voice (Retell AI + Twilio) and SMS (Groq Llama 3.1) to qualify their budget and timeline, books property visits directly onto the agent's Cal.com calendar, cleans and updates CRM records, and automatically follows up with cold leads to recover lost sales.",
+      tags: ["React", "Node.js", "Express", "PostgreSQL", "Supabase", "Retell AI", "Twilio", "Cal.com", "Groq AI"],
       highlight: "🏢 Codiva Venture · PropTech AI SaaS",
       github: "https://github.com/bott-127001/Prosperia",
       demo: "https://real-estate-iota-six-59.vercel.app/"
